@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>TV、新聞（マスメディア）</title>
     <div class="header-text">
-        TV　更新時間：2025年03月10日 21時46分55秒　741 件　再生時間： 37 時間 21 分 19 秒 ( 134,479 秒 )
+        TV　更新時間：2025年03月10日 21時57分01秒　741 件　再生時間： 37 時間 21 分 19 秒 ( 134,479 秒 )
     </div>
     <style>
         body {
@@ -8445,7 +8445,26 @@
             console.log('選択されたエリア:', selectedArea); // デバッグ用
             console.log('areaPrefectureMap:', areaPrefectureMap); // マッピング確認
 
-            if (selectedArea && areaPrefectureMap[selectedArea]) {
+            // キー局、全国紙、地方紙の場合、県を固定
+            if (selectedArea === 'キー局' || selectedArea === '北海道' || selectedArea === '全国紙' || selectedArea === '地方紙' || selectedArea === 'その他') {
+                const option = document.createElement('option');
+                option.value = selectedArea;
+                option.text = selectedArea;
+                option.selected = true; // 自動選択
+                prefectureSelect.appendChild(option);
+                // TV局リストを自動更新
+                if (prefectureTvMap[selectedArea]) {
+                    prefectureTvMap[selectedArea].forEach(station => {
+                        const hasData = existingStations.includes(station.split('_')[0]);
+                        const option = document.createElement('option');
+                        option.value = station;
+                        option.text = station;
+                        if (!hasData) option.className = 'no-data';
+                        tvSelect.appendChild(option);
+                    });
+                }
+            } else if (selectedArea && areaPrefectureMap[selectedArea]) {
+                // その他のエリアは従来通り
                 areaPrefectureMap[selectedArea].forEach(pref => {
                     const hasData = prefectureTvMap[pref] && prefectureTvMap[pref].some(station => existingStations.includes(station.split('_')[0]));
                     const option = document.createElement('option');
