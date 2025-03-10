@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>TV、新聞（マスメディア）</title>
     <div class="header-text">
-        TV：2025年03月10日 17時39分13秒（更新時間）
+        TV：2025年03月10日 18時22分48秒（更新時間）
     </div>
     <style>
         .container {
@@ -47,1438 +47,362 @@
             overflow: hidden;
             word-wrap: break-word;
         }
-        #dirname-select {
-            width: 100%;
+        .select-box {
+            width: 48%;
             padding: 10px;
             margin-bottom: 20px;
             font-size: 16px;
+            margin-right: 4%;
+        }
+        #debug {
+            margin-bottom: 20px;
+            color: red;
         }
     </style>
 </head>
 <body>
-    <select id="dirname-select">
-        <option value="">すべて表示</option>
+    <select id="area-select" class="select-box">
+        <option value="">エリアを選択（すべて表示）</option>
 
-            <option value="001_NTV_日本テレビ/2025">001_NTV_日本テレビ/2025</option>
+            <option value="キー局">キー局</option>
     
-            <option value="002_TBS_TBSテレビ/2025">002_TBS_TBSテレビ/2025</option>
+            <option value="北海道">北海道</option>
     
-            <option value="003_CX_フジテレビジョン/2025">003_CX_フジテレビジョン/2025</option>
+            <option value="東北">東北</option>
     
-            <option value="004_EX_テレビ朝日/2025">004_EX_テレビ朝日/2025</option>
+            <option value="南関東">南関東</option>
     
-            <option value="005_TX_テレビ東京/2025">005_TX_テレビ東京/2025</option>
+            <option value="北関東・甲信">北関東・甲信</option>
     
-            <option value="007_HBC_北海道放送/2025">007_HBC_北海道放送/2025</option>
+            <option value="北陸">北陸</option>
     
-            <option value="008_UHB_北海道文化放送/2025">008_UHB_北海道文化放送/2025</option>
+            <option value="東海">東海</option>
     
-            <option value="009_HTB_北海道テレビ放送/2025">009_HTB_北海道テレビ放送/2025</option>
+            <option value="近畿">近畿</option>
     
-            <option value="013_ABA_青森朝日放送/2025">013_ABA_青森朝日放送/2025</option>
+            <option value="中国">中国</option>
     
-            <option value="019_tbc_東北放送/2025">019_tbc_東北放送/2025</option>
+            <option value="四国">四国</option>
     
-            <option value="022_ABS_秋田放送/2025">022_ABS_秋田放送/2025</option>
+            <option value="九州">九州</option>
     
-            <option value="023_AKT_秋田テレビ/2025">023_AKT_秋田テレビ/2025</option>
+            <option value="全国">全国</option>
     
-            <option value="026_TUY_テレビユー山形/2025">026_TUY_テレビユー山形/2025</option>
+            <option value="地方">地方</option>
     
-            <option value="036_CTC_千葉テレビ放送/2025">036_CTC_千葉テレビ放送/2025</option>
-    
-            <option value="038_tvk_テレビ神奈川/2025">038_tvk_テレビ神奈川/2025</option>
-    
-            <option value="039_TeNY_テレビ新潟/2025">039_TeNY_テレビ新潟/2025</option>
-    
-            <option value="046_abn_長野朝日放送/2025">046_abn_長野朝日放送/2025</option>
-    
-            <option value="050_SBS_静岡放送/2025">050_SBS_静岡放送/2025</option>
-    
-            <option value="059_HAB_北陸朝日放送/2025">059_HAB_北陸朝日放送/2025</option>
-    
-            <option value="066_TVA_テレビ愛知/2025">066_TVA_テレビ愛知/2025</option>
-    
-            <option value="069_ytv_讀賣テレビ放送/2025">069_ytv_讀賣テレビ放送/2025</option>
-    
-            <option value="070_MBS_毎日放送/2025">070_MBS_毎日放送/2025</option>
-    
-            <option value="072_ABC_朝日放送テレビ/2025">072_ABC_朝日放送テレビ/2025</option>
-    
-            <option value="084_TSS_テレビ新広島/2025">084_TSS_テレビ新広島/2025</option>
-    
-            <option value="090_RNC_西日本放送/2025">090_RNC_西日本放送/2025</option>
-    
-            <option value="093_KSB_瀬戸内海放送/2025">093_KSB_瀬戸内海放送/2025</option>
-    
-            <option value="103_RKB_RKB毎日放送/2025">103_RKB_RKB毎日放送/2025</option>
-    
-            <option value="105_KBC_九州朝日放送/2025">105_KBC_九州朝日放送/2025</option>
-    
-            <option value="111_NCC_長崎文化放送/2025">111_NCC_長崎文化放送/2025</option>
-    
-            <option value="112_KKT_熊本県民テレビ/2025">112_KKT_熊本県民テレビ/2025</option>
-    
-            <option value="113_RKK_熊本放送/2025">113_RKK_熊本放送/2025</option>
-    
-            <option value="114_TKU_テレビ熊本/2025">114_TKU_テレビ熊本/2025</option>
-    
-            <option value="117_OBS_大分放送/2025">117_OBS_大分放送/2025</option>
-    
-            <option value="121_KYT_鹿児島読売テレビ/2025">121_KYT_鹿児島読売テレビ/2025</option>
-    
-            <option value="122_MBC_南日本放送/2025">122_MBC_南日本放送/2025</option>
-    
-            <option value="128_YOMIURI_読売新聞/2025">128_YOMIURI_読売新聞/2025</option>
-    
-            <option value="130_SANKEI_産経新聞/2025">130_SANKEI_産経新聞/2025</option>
-    
-            <option value="131_ASAHI_朝日新聞/2025">131_ASAHI_朝日新聞/2025</option>
-    
-            <option value="144_WNI_ウェザーニューズ/2025">144_WNI_ウェザーニューズ/2025</option>
-    
-            <option value="145_BBCNJ_BBC News Japan/2025">145_BBCNJ_BBC News Japan/2025</option>
-    
-            <option value="146_REUTER_ロイター/2025">146_REUTER_ロイター/2025</option>
+            <option value="その他">その他</option>
     
         </select>
+        <select id="prefecture-select" class="select-box">
+            <option value="">県を選択（すべて表示）</option>
+        </select>
+        <div id="debug"></div>
         <div class="container">
     
-        <div class="item" data-dirname="121_KYT_鹿児島読売テレビ/2025">
+        <div class="item" data-dirname="100_KUTV_テレビ高知/2025" data-station="100_KUTV_テレビ高知">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/h6jJdBB-VaE?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/h6jJdBB-VaE/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/64YJh5xxzJA?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/64YJh5xxzJA/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 121_KYT_鹿児島読売テレビ/2025/かごしま空チェック【今週はすっきりしない天気が続く！】_[h6jJdBB-VaE]_2025.03.10 16：15_4分48秒  <a href="https://www.youtube.com/@KagoshimaNEWS_KYT/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                <a href="http://192.168.1.3:80/mine_TV/youtube_text_html/100_KUTV_テレビ高知/2025/【高知！中高生ニュース】土佐女子中学・高等学校　マンガサークル部_[64YJh5xxzJA]_2025.03.10 09：00_1分31秒.html" style="cursor: pointer;" target="_blank"> 📄 </a> 100_KUTV_テレビ高知/2025/【高知！中高生ニュース】土佐女子中学・高等学校　マンガサークル部_[64YJh5xxzJA]_2025.03.10 09：00_1分31秒  <a href="https://www.youtube.com/@kutv/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="130_SANKEI_産経新聞/2025">
+        <div class="item" data-dirname="044_SBC_信越放送/2025" data-station="044_SBC_信越放送">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/hoLawMMn-_E?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/hoLawMMn-_E/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/ZnDZ6-WZeik?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/ZnDZ6-WZeik/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 130_SANKEI_産経新聞/2025/連合・芳野友子会長「今国会で選択的夫婦別姓制度の創設を実現してほしい」　自民党大会　連合会長出席は20年ぶり_[hoLawMMn-_E]_2025.03.10 16：14_12分14秒  <a href="https://www.youtube.com/@SankeiNews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 044_SBC_信越放送/2025/まもなく開催！よみがえる恐竜王国inアイシティ21_[ZnDZ6-WZeik]_2025.03.10 09：00_16秒  <a href="https://www.youtube.com/@6sbc/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="103_RKB_RKB毎日放送/2025">
+        <div class="item" data-dirname="078_WTV_テレビ和歌山/2025" data-station="078_WTV_テレビ和歌山">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/-5WgFvaXDXw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/-5WgFvaXDXw/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/GGAFdSNW9d4?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/GGAFdSNW9d4/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 103_RKB_RKB毎日放送/2025/増設の新滑走路で消火訓練　福岡空港３月２０日の供用スタート前に_[-5WgFvaXDXw]_2025.03.10 16：11_1分42秒  <a href="https://www.youtube.com/@rkbnews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 078_WTV_テレビ和歌山/2025/がん看護専門看護師の役割と育成【わかやま医療ナビ】_[GGAFdSNW9d4]_2025.03.10 09：00_13分5秒  <a href="https://www.youtube.com/@telewaka5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="059_HAB_北陸朝日放送/2025">
+        <div class="item" data-dirname="146_REUTER_ロイター/2025" data-station="146_REUTER_ロイター">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/GBnHy5mkWnQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/GBnHy5mkWnQ/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/9VucJ_nQeyo?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/9VucJ_nQeyo/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 059_HAB_北陸朝日放送/2025/金沢で雪つりの取り外し作業始まる_[GBnHy5mkWnQ]_2025.03.10 16：05_1分4秒  <a href="https://www.youtube.com/@habmigochannel/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 146_REUTER_ロイター/2025/0_酒に酔ってレールを枕に寝ていた男性、列車通過直前に頭を浮かせて奇跡的に助かる　ペルー_[9VucJ_nQeyo]_2025.03.10 08：58_57秒  <a href="https://www.youtube.com/@ReutersJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="113_RKK_熊本放送/2025">
+        <div class="item" data-dirname="069_ytv_讀賣テレビ放送/2025" data-station="069_ytv_讀賣テレビ放送">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/uvPdBkuAf1g?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/uvPdBkuAf1g/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/fOVkUqRWiaY?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/fOVkUqRWiaY/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 113_RKK_熊本放送/2025/0_“海とサクラとメジロ” 天草に春の息吹　早咲きのサクラ『河津桜』が見ごろ　熊本_[uvPdBkuAf1g]_2025.03.10 16：04_46秒  <a href="https://www.youtube.com/@rkknews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 069_ytv_讀賣テレビ放送/2025/「多くのことを変えることができた」少年法改正を訴えるなど２６年　少年事件の遺族らが最後の集会_[fOVkUqRWiaY]_2025.03.10 08：48_48秒  <a href="https://www.youtube.com/@ytv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="070_MBS_毎日放送/2025">
+        <div class="item" data-dirname="027_SAY_さくらんぼテレビジョン/2025" data-station="027_SAY_さくらんぼテレビジョン">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/2DzPtpMqldc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/2DzPtpMqldc/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/d0tYHCdv6-o?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/d0tYHCdv6-o/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 070_MBS_毎日放送/2025/奈良県で山林火災「刈った雑草を燃やしていたら付近に燃え移ってしまった」　現在も延焼中　奈良・川上村（2025年3月10日）_[2DzPtpMqldc]_2025.03.10 16：03_42秒  <a href="https://www.youtube.com/@mbsnews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 027_SAY_さくらんぼテレビジョン/2025/【さくらんぼテレビ】昼ドキ！TV　やまがたチョイす3月15日（土）OA予告_[d0tYHCdv6-o]_2025.03.10 08：46_16秒  <a href="https://www.youtube.com/@SakuranboJp-tv/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="069_ytv_讀賣テレビ放送/2025">
+        <div class="item" data-dirname="046_abn_長野朝日放送/2025" data-station="046_abn_長野朝日放送">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/sWMNJelICL4?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/sWMNJelICL4/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/_zxBt3Z2oV4?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/_zxBt3Z2oV4/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 069_ytv_讀賣テレビ放送/2025/【速報】奈良・川上村で山林火災「炎と煙が上がっている」2500平方メートルほど焼損か　消火活動中_[sWMNJelICL4]_2025.03.10 16：01_36秒  <a href="https://www.youtube.com/@ytv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 046_abn_長野朝日放送/2025/仕出し弁当で35人がノロウイルス食中毒　全員快方へ　飯綱町の飲食店を3日間の営業停止処分（abnニュース　2025.03.09）_[_zxBt3Z2oV4]_2025.03.10 08：42_59秒  <a href="https://www.youtube.com/@abn5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="022_ABS_秋田放送/2025">
+        <div class="item" data-dirname="046_abn_長野朝日放送/2025" data-station="046_abn_長野朝日放送">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/3XGkqoo_dDU?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/3XGkqoo_dDU/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/zliEgz0uq28?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/zliEgz0uq28/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 022_ABS_秋田放送/2025/秋田商業レスリング山鹿選手 旅立ちの春_[3XGkqoo_dDU]_2025.03.10 16：00_4分59秒  <a href="https://www.youtube.com/@ABS4ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 046_abn_長野朝日放送/2025/宇宙服を着たダンサーと50機のドローンが市の風景と未来を表現　新佐久市誕生20周年を祝い記念式典（abnニュース　2025.03.09）_[zliEgz0uq28]_2025.03.10 08：39_55秒  <a href="https://www.youtube.com/@abn5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="019_tbc_東北放送/2025">
+        <div class="item" data-dirname="004_EX_テレビ朝日/2025" data-station="004_EX_テレビ朝日">
             <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/2yrwj8m4PYM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/2yrwj8m4PYM/hqdefault.jpg" alt="サムネイル">
+                <a href="https://www.youtube.com/embed/hBcMrIw84ck?autoplay=1" target="_blank">
+                    <img src="https://img.youtube.com/vi/hBcMrIw84ck/hqdefault.jpg" alt="サムネイル">
                 </a>
             </div>
             <div class="description">
-                 019_tbc_東北放送/2025/やまびこ走行中に「ドン」東北新幹線運転見合わせの原因は「線路内に立ち入った人と接触」_[2yrwj8m4PYM]_2025.03.10 15：57_43秒  <a href="https://www.youtube.com/@tbc1260_official/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
+                 004_EX_テレビ朝日/2025/【速報】カナダ後継首相　元加銀総裁のカーニー氏へ(2025年3月10日)_[hBcMrIw84ck]_2025.03.10 08：33_1分1秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
             </div>
         </div>
 
-        <div class="item" data-dirname="117_OBS_大分放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/HNABV_7Srlk?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/HNABV_7Srlk/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 117_OBS_大分放送/2025/県内の3月景気動向　日銀は3か月連続据え置き 「経済回復を支えている状況に変化なし」_[HNABV_7Srlk]_2025.03.10 15：56_1分  <a href="https://www.youtube.com/@obs_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="146_REUTER_ロイター/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Qq46ug5Zb3U?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Qq46ug5Zb3U/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 146_REUTER_ロイター/2025/米俳優ハックマンさんの死因は心臓病、妻はハンタウイルスで1週前に病死　当局発表_[Qq46ug5Zb3U]_2025.03.10 15：53_55秒  <a href="https://www.youtube.com/@ReutersJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="146_REUTER_ロイター/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/0vLCqb_pjS8?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/0vLCqb_pjS8/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 146_REUTER_ロイター/2025/解説：ウクライナの衛星通信網どうなる、米政権の交渉材料に「スターリンク遮断」の懸念も_[0vLCqb_pjS8]_2025.03.10 15：53_2分57秒  <a href="https://www.youtube.com/@ReutersJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="131_ASAHI_朝日新聞/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/FQ9Ao3V41Hg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/FQ9Ao3V41Hg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 131_ASAHI_朝日新聞/2025/0_「鎮圧」で避難指示解除　市の約9% 約2900ヘクタールを焼失　「鎮火」のめどは立たず_[FQ9Ao3V41Hg]_2025.03.10 15：52_54秒  <a href="https://www.youtube.com/@asahicom/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/1Fi8qOPCopI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/1Fi8qOPCopI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【速報】奈良・川上村で「山林から炎と煙」と119番通報_[1Fi8qOPCopI]_2025.03.10 15：50_1分48秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/ai01t_4O7cY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/ai01t_4O7cY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/【速報】奈良・川上村で山火事が発生　消防車15台ヘリ3機で消火活動中(2025年3月10日)_[ai01t_4O7cY]_2025.03.10 15：47_1分3秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/3SLs--5TYUI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/3SLs--5TYUI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/浦安市長選挙 ９日告示　現職・内田市長が無投票で３選（2025.03.10放送）_[3SLs--5TYUI]_2025.03.10 15：43_1分33秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="111_NCC_長崎文化放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/VF-8whsyGS0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/VF-8whsyGS0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 111_NCC_長崎文化放送/2025/【3月15日(土）あさ9時30分～トコサタPR 】連日完売！行列必至ベーグルなど住吉＆浜町テレビ初出し企画_[VF-8whsyGS0]_2025.03.10 15：43_16秒  <a href="https://www.youtube.com/@ncctvnagasaki/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/WjaqhUS12wI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/WjaqhUS12wI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【日産】運転席にドライバーの姿なし  国内初の市街地での自動運転車両実験公開_[WjaqhUS12wI]_2025.03.10 15：40_1分23秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/ADZ74vt86D0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/ADZ74vt86D0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/“待っていてくれたミーちゃん”飼い猫と再会の瞬間　岩手・大船渡市「避難解除宣言」【羽鳥慎一モーニングショー】(2025年3月10日)_[ADZ74vt86D0]_2025.03.10 15：37_12分18秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/P4hAB9D4zxw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/P4hAB9D4zxw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/貴重な品がずらり　航空ジャンク市（2025.03.08放送）_[P4hAB9D4zxw]_2025.03.10 15：34_44秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/g2ieQkG_GcA?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/g2ieQkG_GcA/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/ベトナムから帰国の４０代男性　はしか感染　千葉県が発表（2025.03.08放送）_[g2ieQkG_GcA]_2025.03.10 15：32_40秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/V5UsgjO0P48?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/V5UsgjO0P48/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/３月１６日は千葉県知事選　投票参加呼びかけ　県内一斉に街頭啓発（2025.03.08放送）_[V5UsgjO0P48]_2025.03.10 15：31_52秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="072_ABC_朝日放送テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/uClKkMTs3XQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/uClKkMTs3XQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 072_ABC_朝日放送テレビ/2025/【健康・安全を脅かす恐れ】化粧品に浄水器カートリッジまで　関空でコピー商品の注意呼びかけ　大阪税関が取締り強化期間_[uClKkMTs3XQ]_2025.03.10 15：30_48秒  <a href="https://www.youtube.com/@abc6ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/cFAWlQa8MIM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/cFAWlQa8MIM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/診療所に遺体遺棄疑い　とび職の男性不起訴処分に　千葉地検（2025.03.07放送）_[cFAWlQa8MIM]_2025.03.10 15：29_41秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="093_KSB_瀬戸内海放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/EQNQrmWKQOc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/EQNQrmWKQOc/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 093_KSB_瀬戸内海放送/2025/高校生と見つける、私たちのSDGs vol.249「高校生がSDGs活動をプレゼン(1)」_[EQNQrmWKQOc]_2025.03.10 15：28_2分16秒  <a href="https://www.youtube.com/@ksb5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/6QMuPvq7aEc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/6QMuPvq7aEc/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/千葉県知事選挙の期日前投票　６日までに約９万２０００人（2025.03.07放送）_[6QMuPvq7aEc]_2025.03.10 15：27_1分17秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Pim7RJIqptE?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Pim7RJIqptE/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/国産ＳＡＦで地域を豊かに　千葉市でセミナー　千葉県と成田空港活用協が共催（2025.03.07放送）_[Pim7RJIqptE]_2025.03.10 15：25_1分25秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/S19LhMz__So?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/S19LhMz__So/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【1月の実質賃金】3か月ぶりにマイナス_[S19LhMz__So]_2025.03.10 15：24_1分3秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/aAyLSKsv8wo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/aAyLSKsv8wo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/市柏高の卒業アルバム情報 約８３０人分漏えいの恐れ　印刷業者に不正アクセス（2025.03.07放送）_[aAyLSKsv8wo]_2025.03.10 15：23_52秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/v5ZbjLnETcg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/v5ZbjLnETcg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/1月の経常収支は2500億円超の赤字　2023年1月以来2年ぶり　輸入の大幅増が要因(2025年3月10日)_[v5ZbjLnETcg]_2025.03.10 15：20_1分3秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="117_OBS_大分放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/AJ3rRc-9mAk?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/AJ3rRc-9mAk/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 117_OBS_大分放送/2025/円安でインバウンド過去最多　台湾人観光客が急増、10年で2倍超　次なるターゲットは“欧米豪”_[AJ3rRc-9mAk]_2025.03.10 15：16_4分20秒  <a href="https://www.youtube.com/@obs_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="146_REUTER_ロイター/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/ATik_K1oooY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/ATik_K1oooY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 146_REUTER_ロイター/2025/6000人の候補者が標的になるとの指摘も、司法関係者の暗殺が横行するメキシコで判事選挙_[ATik_K1oooY]_2025.03.10 15：15_2分13秒  <a href="https://www.youtube.com/@ReutersJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="093_KSB_瀬戸内海放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/p9PBN7HTARs?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/p9PBN7HTARs/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 093_KSB_瀬戸内海放送/2025/【特集】危険ドラッグ事故で娘を亡くして11年　受刑者からの手紙に遺族は…　香川_[p9PBN7HTARs]_2025.03.10 15：09_10分7秒  <a href="https://www.youtube.com/@ksb5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="130_SANKEI_産経新聞/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Maf3qF8bBcg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Maf3qF8bBcg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 130_SANKEI_産経新聞/2025/石破茂首相演説「国民は政治信じていない」「あのときの謙虚さを取り戻したい」　第92回自民党大会_[Maf3qF8bBcg]_2025.03.10 15：08_20分  <a href="https://www.youtube.com/@SankeiNews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/CIkKVgnIscM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/CIkKVgnIscM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/酔って線路を枕に寝込み…そこへ列車が！軽傷で済んだ奇跡の瞬間(2025年3月10日)_[CIkKVgnIscM]_2025.03.10 15：07_44秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/YL-Xl-7Y_Gc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/YL-Xl-7Y_Gc/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【速報】北朝鮮、弾道ミサイル数発を発射  韓国軍発表_[YL-Xl-7Y_Gc]_2025.03.10 15：03_1分9秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/WbfLfjHN3Qw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/WbfLfjHN3Qw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/【速報】北朝鮮 黄海に向け弾道ミサイル数発を発射　韓国軍(2025年3月10日)_[WbfLfjHN3Qw]_2025.03.10 15：01_15秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/ZGM-oiTAA_I?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/ZGM-oiTAA_I/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/【速報】北朝鮮が数発の弾道ミサイルを発射　韓国軍｜TBS NEWS DIG_[ZGM-oiTAA_I]_2025.03.10 14：58_13秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="066_TVA_テレビ愛知/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/nBm1zJ0h19E?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/nBm1zJ0h19E/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 066_TVA_テレビ愛知/2025/男「詰め襟」女「セーラー服」　定番の制服は昔の話　学生服にも「多様性」モデルチェンジは800校以上　 (2025年3月10日)_[nBm1zJ0h19E]_2025.03.10 14：57_5分20秒  <a href="https://www.youtube.com/@aichi-news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="038_tvk_テレビ神奈川/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/4fYaEQjM1jw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/4fYaEQjM1jw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 038_tvk_テレビ神奈川/2025/深刻化する教員のなり手不足… 川崎市立小学校で働く現場の声 / 行政の対応は？【News Linkオンライン】_[4fYaEQjM1jw]_2025.03.10 14：55_10分3秒  <a href="https://www.youtube.com/@tvknewslink/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="128_YOMIURI_読売新聞/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/VCxY2B8Pmv4?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/VCxY2B8Pmv4/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 128_YOMIURI_読売新聞/2025/首都高速中央環状線１０周年 、大橋ジャンクションを公開_[VCxY2B8Pmv4]_2025.03.10 14：51_4分27秒  <a href="https://www.youtube.com/@YomiuriShimbun/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="026_TUY_テレビユー山形/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/tMUs63ZDCoM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/tMUs63ZDCoM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 026_TUY_テレビユー山形/2025/無病息災や家内安全を！寒河江市幸生地区の伝統行事 “病（やんまい）送り”とは_[tMUs63ZDCoM]_2025.03.10 14：48_1分46秒  <a href="https://www.youtube.com/@tuy6ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="122_MBC_南日本放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/dayqT8HcnHI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/dayqT8HcnHI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 122_MBC_南日本放送/2025/【ジドリセン】看板猫をさがして【妙見温泉】_[dayqT8HcnHI]_2025.03.10 14：37_4分35秒  <a href="https://www.youtube.com/@KagoshimaMBC/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="038_tvk_テレビ神奈川/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/5ec23JaFl64?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/5ec23JaFl64/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 038_tvk_テレビ神奈川/2025/【ふるさと、この一品】逗子の海を漕ぐマリンスポーツ「SUP体験」【News Linkオンライン】_[5ec23JaFl64]_2025.03.10 14：32_4分55秒  <a href="https://www.youtube.com/@tvknewslink/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="038_tvk_テレビ神奈川/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/XeDxRjKOdA8?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/XeDxRjKOdA8/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 038_tvk_テレビ神奈川/2025/くぼてんきのお天気LINK 2025年3月「今季の冬、ことしの桜」【News Linkオンライン】_[XeDxRjKOdA8]_2025.03.10 14：31_3分36秒  <a href="https://www.youtube.com/@tvknewslink/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/hGzk4ydFtTQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/hGzk4ydFtTQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/「カナダ経済を弱くしようとしている人間がいます。トランプ大統領です」トルドー首相の後継にカーニー氏／ウクライナ軍事支援停止／マスク氏とルビオ国務長官が激しく衝突 米有力紙が報道【関連ニュース】_[hGzk4ydFtTQ]_2025.03.10 14：29_14分19秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/4hsKxZCQPK4?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/4hsKxZCQPK4/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/前部がメチャクチャに…豊洲市場前でバイクに追突したトラックが街路灯に衝突し大破…街路灯も傾き2人ケガ　東京・江東区_[4hsKxZCQPK4]_2025.03.10 14：20_1分7秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/2cJOERZa2dU?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/2cJOERZa2dU/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/市原ホテル殺人　元従業員の男起訴　刑事責任問えると判断（2025.03.07放送）_[2cJOERZa2dU]_2025.03.10 14：20_1分2秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/PAjU1a7NXyA?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/PAjU1a7NXyA/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/三菱UFJ銀行貸金庫事件　元行員の女を再逮捕 現金も盗んだ疑い(2025年3月10日)_[PAjU1a7NXyA]_2025.03.10 14：19_54秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="144_WNI_ウェザーニューズ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/oybjquDlg-M?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/oybjquDlg-M/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 144_WNI_ウェザーニューズ/2025/【今日の天気】広く晴れて春らしい気温／3月10日(月)の暖房予報（auでんき予報）_[oybjquDlg-M]_2025.03.10 14：19_2分39秒  <a href="https://www.youtube.com/@weathernews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/xq8YW6yJFT8?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/xq8YW6yJFT8/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/2月の倒産件数700件超　6カ月連続で前年上回る　人手不足関連の倒産が高水準(2025年3月10日)_[xq8YW6yJFT8]_2025.03.10 14：19_1分8秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="145_BBCNJ_BBC News Japan/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/_mhlxrHkhmo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/_mhlxrHkhmo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 145_BBCNJ_BBC News Japan/2025/シリア暫定政府部隊がアラウィ派多数殺害、首都住民も暴力に抗議_[_mhlxrHkhmo]_2025.03.10 14：17_2分1秒  <a href="https://www.youtube.com/@BBCNewsJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Fd1sYDR9lII?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Fd1sYDR9lII/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/0_【●REC from 311～復興の現在地】福島・大熊町⑩ 定点撮影 2025年Ver_[Fd1sYDR9lII]_2025.03.10 14：17_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/N-U83Rhr9Us?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/N-U83Rhr9Us/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/国道246号で乗用車2台絡む事故 1台が横転 2人けが　東京・世田谷区(2025年3月10日)_[N-U83Rhr9Us]_2025.03.10 14：15_47秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/HrcPJpRncqQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/HrcPJpRncqQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/貸金庫窃盗事件で三菱UFJ銀行元行員の女を再逮捕…客の貸金庫から金塊に続き現金1650万円を盗んだ疑い_[HrcPJpRncqQ]_2025.03.10 14：15_1分9秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="013_ABA_青森朝日放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/USSfZr5WSIo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/USSfZr5WSIo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 013_ABA_青森朝日放送/2025/「藤原が行く」#９　７人死傷事故の青森県六戸町交差点　何が変わった？_[USSfZr5WSIo]_2025.03.10 14：12_3分27秒  <a href="https://www.youtube.com/@aba-news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/xq9RJyKGyFo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/xq9RJyKGyFo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/トランプ氏　ウクライナとの高官協議「大きな進展」と期待(2025年3月10日)_[xq9RJyKGyFo]_2025.03.10 14：11_50秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/D_ajwtvhBk0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/D_ajwtvhBk0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/秋篠宮ご夫妻も焼香…約10万人が死亡した東京大空襲からきょうで80年　東京都慰霊堂で法要_[D_ajwtvhBk0]_2025.03.10 14：10_1分11秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="084_TSS_テレビ新広島/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/3cMDOQU7-Cg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/3cMDOQU7-Cg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 084_TSS_テレビ新広島/2025/国道２号で車とバイクが衝突　バイク運転の男性（５６）死亡　コンビニ駐車場から出てきた車に追突か　広島_[3cMDOQU7-Cg]_2025.03.10 14：09_54秒  <a href="https://www.youtube.com/@tss3367/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="114_TKU_テレビ熊本/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/K2tKLAhoDxw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/K2tKLAhoDxw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 114_TKU_テレビ熊本/2025/0_「NES-FES.」 #131　 2025.3.14_[K2tKLAhoDxw]_2025.03.10 14：05_40秒  <a href="https://www.youtube.com/@TKUofficial/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/7QLXXl4hH_A?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/7QLXXl4hH_A/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/石破首相「社会保障政策を“選挙の具”に用いると不幸に」　年金改革法案“先送り論”めぐり野党反発　参院予算委_[7QLXXl4hH_A]_2025.03.10 14：05_1分54秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/X8zTlY01UXs?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/X8zTlY01UXs/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/新潟・柏崎刈羽原発の原子炉建屋内で変圧器が焦げて一時発煙　消防「火災には当たらない」｜TBS NEWS DIG_[X8zTlY01UXs]_2025.03.10 14：02_53秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="105_KBC_九州朝日放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Bm3BrTaRDFc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Bm3BrTaRDFc/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 105_KBC_九州朝日放送/2025/映画「オオムタアツシの青春」　劇中の店がオープン_[Bm3BrTaRDFc]_2025.03.10 14：00_1分8秒  <a href="https://www.youtube.com/@KBCnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/5bped-y7iwM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/5bped-y7iwM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/12日ぶり自宅戻る姿も…大船渡の山火事で約2400人への避難指示全解除　「鎮圧」発表も引き続き鎮火へ消火活動続く_[5bped-y7iwM]_2025.03.10 14：00_1分46秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="090_RNC_西日本放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/-WZx1s6kGF0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/-WZx1s6kGF0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 090_RNC_西日本放送/2025/ルック　～地域発・輝くビジネス～・稲荷交通　2025/03/09放送_[-WZx1s6kGF0]_2025.03.10 14：00_11分3秒  <a href="https://www.youtube.com/@rnc_tvradio/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="066_TVA_テレビ愛知/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/MLCXNPu7Q2M?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/MLCXNPu7Q2M/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 066_TVA_テレビ愛知/2025/【行方不明展】「張り紙」「遺留品」「都市伝説」行方不明にまつわる物品や情報を集めて分類する異色の展示会が開催【突撃ライブ】 (2025年3月10日)_[MLCXNPu7Q2M]_2025.03.10 13：59_3分17秒  <a href="https://www.youtube.com/@aichi-news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="046_abn_長野朝日放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/q9qMz-pOK5U?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/q9qMz-pOK5U/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 046_abn_長野朝日放送/2025/駅ににぎわいを「eスポーツ×街づくり」（abnステーション きょうの特集・2025年3月10日）_[q9qMz-pOK5U]_2025.03.10 13：59_16秒  <a href="https://www.youtube.com/@abn5ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/MMse0ph5zxk?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/MMse0ph5zxk/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/年金制度改革関連法案めぐり　石破総理「選挙の具になれば国民が不幸になる」｜TBS NEWS DIG_[MMse0ph5zxk]_2025.03.10 13：58_54秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="066_TVA_テレビ愛知/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/WaDfJnSlfho?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/WaDfJnSlfho/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 066_TVA_テレビ愛知/2025/【能登半島地震】「大好きなので輪島に戻りたい」　能登半島地震に被災し「ふるさと」を離れ愛知で暮らす人の思い (2025年3月10日)_[WaDfJnSlfho]_2025.03.10 13：57_5分48秒  <a href="https://www.youtube.com/@aichi-news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/OX138aUSinY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/OX138aUSinY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/【速報】東北新幹線・東京～新青森 運転見合わせ　異音感知で点検(2025年3月10日)_[OX138aUSinY]_2025.03.10 13：57_20秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/v2EfG5WirrU?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/v2EfG5WirrU/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/浦安市長に内田悦嗣氏　無投票で３選（2025.03.09放送）_[v2EfG5WirrU]_2025.03.10 13：56_49秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="036_CTC_千葉テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/01q-MFdq_dY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/01q-MFdq_dY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 036_CTC_千葉テレビ放送/2025/鴨川市長選挙　９日告示　元職と新人の一騎打ち（2025.03.09放送）_[01q-MFdq_dY]_2025.03.10 13：55_51秒  <a href="https://www.youtube.com/@chibaNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/T76ETV02uuY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/T76ETV02uuY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/【●REC from 311～復興の現在地】福島・大熊町⑧ 定点撮影 2025年Ver_[T76ETV02uuY]_2025.03.10 13：55_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/fAgLdVXXhjM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/fAgLdVXXhjM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/【速報】栃木県足利市のゴルフ場で火事　3番ホールから出火か　山林から煙あがる様子も　消火活動急ぐ｜TBS NEWS DIG_[fAgLdVXXhjM]_2025.03.10 13：53_39秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/lUXnHvaRuPg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/lUXnHvaRuPg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/【●REC from 311～復興の現在地】福島・大熊町⑦ 定点撮影 2025年Ver_[lUXnHvaRuPg]_2025.03.10 13：51_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/nBf9Zd_NnqM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/nBf9Zd_NnqM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【速報】東北新幹線、全線で運転見合わせ_[nBf9Zd_NnqM]_2025.03.10 13：50_1分2秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="050_SBS_静岡放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/p86s8MFxItg?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/p86s8MFxItg/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 050_SBS_静岡放送/2025/「被災者であって、被災者でない私」が語る東日本震災 聞き手に“目線合わせる”女子大学生の語り部_[p86s8MFxItg]_2025.03.10 13：46_7分  <a href="https://www.youtube.com/@SBSnews6/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="050_SBS_静岡放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/EXLIW6UHwds?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/EXLIW6UHwds/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 050_SBS_静岡放送/2025/日常的に暴行か 知人男性を拳で殴り死亡させた疑い 57歳男逮捕 あばら骨折り呼吸不全で死亡＝静岡県警_[EXLIW6UHwds]_2025.03.10 13：43_59秒  <a href="https://www.youtube.com/@SBSnews6/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="023_AKT_秋田テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/EgW0lYYypnQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/EgW0lYYypnQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 023_AKT_秋田テレビ/2025/マッチングアプリで知り合った相手から副業に誘われ被害　秋田市の50代男性　225万円だまし取られる (25/03/10 12:00)_[EgW0lYYypnQ]_2025.03.10 13：42_1分11秒  <a href="https://www.youtube.com/@livenewsakt969/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="112_KKT_熊本県民テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/gjkSSE2QDM4?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/gjkSSE2QDM4/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 112_KKT_熊本県民テレビ/2025/出張先で酩酊して迷惑行為や二日酔いで研修欠席 山都町の20代男性職員が減給処分_[gjkSSE2QDM4]_2025.03.10 13：41_40秒  <a href="https://www.youtube.com/@KKT/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="112_KKT_熊本県民テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/9J0mr19HMaE?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/9J0mr19HMaE/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 112_KKT_熊本県民テレビ/2025/【事故】駐車場に入ろうと左折した車と衝突 バイクの22歳女性が意識不明の重体 熊本市_[9J0mr19HMaE]_2025.03.10 13：36_30秒  <a href="https://www.youtube.com/@KKT/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/MkLqz7zoCxo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/MkLqz7zoCxo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/豊洲市場付近でトラックが乗用車とバイクに追突 バイクの20代男性が大けが(2025年3月10日)_[MkLqz7zoCxo]_2025.03.10 13：35_50秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/rfRZHnu7NGM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/rfRZHnu7NGM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/0_【●REC from 311～復興の現在地】福島・大熊町⑥ 定点撮影 2025年Ver_[rfRZHnu7NGM]_2025.03.10 13：33_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/tfeJM8yYB1A?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/tfeJM8yYB1A/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/埼玉・久喜で住宅火災 住人男性を救助　一時“逃げ遅れ”の情報(2025年3月10日)_[tfeJM8yYB1A]_2025.03.10 13：30_1分4秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="105_KBC_九州朝日放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/a2-DC_0uwyU?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/a2-DC_0uwyU/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 105_KBC_九州朝日放送/2025/無差別傷害事件想定し…　北九州モノレールで訓練_[a2-DC_0uwyU]_2025.03.10 13：30_1分14秒  <a href="https://www.youtube.com/@KBCnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="144_WNI_ウェザーニューズ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Kfa-1zl9aB8?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Kfa-1zl9aB8/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 144_WNI_ウェザーニューズ/2025/【週間天気予報】太平洋沿岸を中心に曇りや雨の日が多い一週間_[Kfa-1zl9aB8]_2025.03.10 13：29_1分3秒  <a href="https://www.youtube.com/@weathernews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/KTrj6dXvCvM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/KTrj6dXvCvM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/0_【●REC from 311～復興の現在地】福島・大熊町③ 定点撮影 2025年Ver_[KTrj6dXvCvM]_2025.03.10 13：28_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/moAyqkA57RY?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/moAyqkA57RY/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/0_【●REC from 311～復興の現在地】福島・大熊町⑤ 定点撮影 2025年Ver_[moAyqkA57RY]_2025.03.10 13：27_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/bYBM2znPcPM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/bYBM2znPcPM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/0_【●REC from 311～復興の現在地】福島・大熊町④ 定点撮影 2025年Ver_[bYBM2znPcPM]_2025.03.10 13：24_22秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="039_TeNY_テレビ新潟/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/RKI8Z9CiwjQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/RKI8Z9CiwjQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 039_TeNY_テレビ新潟/2025/柏崎刈羽原発６号機で発煙を確認　外部への放射能の影響なし《新潟》_[RKI8Z9CiwjQ]_2025.03.10 13：24_1分1秒  <a href="https://www.youtube.com/@TeNYNEWS/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="038_tvk_テレビ神奈川/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/MABV1_NlRB0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/MABV1_NlRB0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 038_tvk_テレビ神奈川/2025/大船渡市山林火災　毎分４０００リットル送水　横浜市消防局が市長に活動報告_[MABV1_NlRB0]_2025.03.10 13：17_1分37秒  <a href="https://www.youtube.com/@tvknewslink/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="131_ASAHI_朝日新聞/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/_bXWjvLNGB8?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/_bXWjvLNGB8/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 131_ASAHI_朝日新聞/2025/消えた300億　船井電機破産、だまされたのは誰?_[_bXWjvLNGB8]_2025.03.10 13：16_44秒  <a href="https://www.youtube.com/@asahicom/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="022_ABS_秋田放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/zEb17Y7Xsow?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/zEb17Y7Xsow/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 022_ABS_秋田放送/2025/３月１０日（月）秋田県内のニュースヘッドライン_[zEb17Y7Xsow]_2025.03.10 13：12_3分20秒  <a href="https://www.youtube.com/@ABS4ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="146_REUTER_ロイター/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/nXE-nsQvufI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/nXE-nsQvufI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 146_REUTER_ロイター/2025/米国で15年ぶり銃による死刑執行、本人が薬物注射など拒否_[nXE-nsQvufI]_2025.03.10 13：09_2分15秒  <a href="https://www.youtube.com/@ReutersJapan/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="144_WNI_ウェザーニューズ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/zwQXnbFHkZI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/zwQXnbFHkZI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 144_WNI_ウェザーニューズ/2025/【海外地震】専門家解説／北極付近 ヤンマイエン島 M6.5 震度6弱前後の強い揺れか 津波被害の心配影響なし_[zwQXnbFHkZI]_2025.03.10 13：08_1分26秒  <a href="https://www.youtube.com/@weathernews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Nuz4X7xkt1U?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Nuz4X7xkt1U/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/「1人でどこへでも」池田エライザ、“おひとり様”を満喫(2025年3月10日)_[Nuz4X7xkt1U]_2025.03.10 13：07_59秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/05IxcO2B4Us?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/05IxcO2B4Us/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【東京大空襲から80年】都内で「春季慰霊大法要」_[05IxcO2B4Us]_2025.03.10 13：07_1分8秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="072_ABC_朝日放送テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/a6V-eoz88VU?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/a6V-eoz88VU/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 072_ABC_朝日放送テレビ/2025/0_【速報】阪和道で接触事故　トラック横転し一部通行止め　土砂が道路塞ぐ_[a6V-eoz88VU]_2025.03.10 13：07_11分43秒  <a href="https://www.youtube.com/@abc6ch/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="009_HTB_北海道テレビ放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/9XNj9bzmbOM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/9XNj9bzmbOM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 009_HTB_北海道テレビ放送/2025/3月10日(月)　北海道の天気予報　ポイント「全体的にポカポカ陽気　雪どけ加速」_[9XNj9bzmbOM]_2025.03.10 13：02_1分59秒  <a href="https://www.youtube.com/@htbnews/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/H2jYT0sp-MI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/H2jYT0sp-MI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/埼玉でコンビニ強盗 “おの”使い脅迫　全身黒ずくめの男が逃走中(2025年3月10日)_[H2jYT0sp-MI]_2025.03.10 13：00_58秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="117_OBS_大分放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Ub0r369sv_c?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Ub0r369sv_c/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 117_OBS_大分放送/2025/センバツ出場の柳ヶ浦高校で野球部壮行会　350人が選手にエール_[Ub0r369sv_c]_2025.03.10 12：57_49秒  <a href="https://www.youtube.com/@obs_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/lxbQQXhocbk?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/lxbQQXhocbk/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【ノロウイルス】 「一睡もできない」家族全員が感染も…感染性胃腸炎の患者数“過去10年で最多”　有効な対策は？/なぜ冬場に多い？ノロウイルス　アルコール消毒は“効果なし”_[lxbQQXhocbk]_2025.03.10 12：55_17分  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/QT3WFye54CA?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/QT3WFye54CA/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/3月10日の天気_[QT3WFye54CA]_2025.03.10 12：54_33秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/CHGY410Deoo?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/CHGY410Deoo/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/中国がアメリカトランプ政権の追加関税に報復関税「第2弾」_[CHGY410Deoo]_2025.03.10 12：53_58秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/17CoZlbU31o?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/17CoZlbU31o/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/「患者が不安抱えたまま見直しあってはならない」高額療養費めぐり総理陳謝_[17CoZlbU31o]_2025.03.10 12：53_58秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/wcWxakmbgEI?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/wcWxakmbgEI/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/世界兵器輸入取引　ウクライナが最大輸入国に　日本も倍増_[wcWxakmbgEI]_2025.03.10 12：53_42秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/eg0DhST6ULQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/eg0DhST6ULQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/東京・新宿区の違法ポーカー賭博店を摘発　店は10か月で4000万円売り上げか　警視庁｜TBS NEWS DIG_[eg0DhST6ULQ]_2025.03.10 12：53_38秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/orwbUELwumw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/orwbUELwumw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/1月実質賃金が3カ月ぶりマイナス　食料高騰やガソリン代の値上がりなどが影響_[orwbUELwumw]_2025.03.10 12：53_35秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="050_SBS_静岡放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/1tsLLzp_pKw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/1tsLLzp_pKw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 050_SBS_静岡放送/2025/「震災被害を若い人たちに伝えていきたい」“3.11”前にキャンドルナイト 復興願い2000本点灯＝静岡市清水区_[1tsLLzp_pKw]_2025.03.10 12：53_1分15秒  <a href="https://www.youtube.com/@SBSnews6/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="005_TX_テレビ東京/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/CrhHw65DKkc?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/CrhHw65DKkc/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 005_TX_テレビ東京/2025/カナダ 元中銀総裁のカーニー氏が次期首相就任へ「アメリカの一部にはならない」_[CrhHw65DKkc]_2025.03.10 12：52_1分17秒  <a href="https://www.youtube.com/@tvtokyobiz/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="007_HBC_北海道放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/6IfOiomtacs?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/6IfOiomtacs/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 007_HBC_北海道放送/2025/【次期衆院選】北海道3区で自民党が公明党候補者支援へ　前回落選の自民党・高木宏寿氏は「議論が乱暴だ。地元は納得しない」と反論_[6IfOiomtacs]_2025.03.10 12：51_54秒  <a href="https://www.youtube.com/@hbc7142/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="007_HBC_北海道放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/-zRTjlrhGkM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/-zRTjlrhGkM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 007_HBC_北海道放送/2025/世界自然遺産『知床』で横断道路の除雪始まる　全長27キロを1か月以上かけて…ゴールデンウイーク前に開通目指す_[-zRTjlrhGkM]_2025.03.10 12：51_51秒  <a href="https://www.youtube.com/@hbc7142/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="007_HBC_北海道放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/Cym8dy4bXio?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/Cym8dy4bXio/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 007_HBC_北海道放送/2025/滑走路走行中の旅客機がキツネと衝突　乗客乗員47人にけがなし　機体の点検などで計2便が欠航　丘珠空港_[Cym8dy4bXio]_2025.03.10 12：51_49秒  <a href="https://www.youtube.com/@hbc7142/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="002_TBS_TBSテレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/gHmkMzzAz8w?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/gHmkMzzAz8w/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 002_TBS_TBSテレビ/2025/雪の重みから街路樹などを守る“雪吊り”の取り外し作業始まる　金沢市｜TBS NEWS DIG_[gHmkMzzAz8w]_2025.03.10 12：51_31秒  <a href="https://www.youtube.com/@tbsnewsdig/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/4Sz9HrDS6W0?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/4Sz9HrDS6W0/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/南海トラフ地震巡り初発表　臨時情報に込められた“教訓”(2025年3月10日)_[4Sz9HrDS6W0]_2025.03.10 12：46_2分34秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="004_EX_テレビ朝日/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/gyetmfG5eFM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/gyetmfG5eFM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 004_EX_テレビ朝日/2025/ニラの大量窃盗相次ぐ　複数のビニールハウスから300kg超　茨城(2025年3月10日)_[gyetmfG5eFM]_2025.03.10 12：46_1分2秒  <a href="https://www.youtube.com/@ANNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="003_CX_フジテレビジョン/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/VPEY49a9kfk?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/VPEY49a9kfk/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 003_CX_フジテレビジョン/2025/『NHK民放６局防災プロジェクト』 2025_[VPEY49a9kfk]_2025.03.10 12：45_31秒  <a href="https://www.youtube.com/@FNNnewsCH/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="050_SBS_静岡放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/l6xIckYm4wM?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/l6xIckYm4wM/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 050_SBS_静岡放送/2025/時効の15年まで1か月余り…ドラッグストア強盗傷害事件で逮捕の男 初公判で起訴内容認める＝静岡地裁沼津支部_[l6xIckYm4wM]_2025.03.10 12：45_1分15秒  <a href="https://www.youtube.com/@SBSnews6/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="008_UHB_北海道文化放送/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/VCWQ63q2syw?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/VCWQ63q2syw/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 008_UHB_北海道文化放送/2025/3月10日（月）北海道 #お昼のニュース_[VCWQ63q2syw]_2025.03.10 12：40_2分56秒  <a href="https://www.youtube.com/@uhb1980/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
-        </div>
-
-        <div class="item" data-dirname="001_NTV_日本テレビ/2025">
-            <div class="video-wrapper">
-                <a href="https://www.youtube.com/embed/16pM3-vI0WQ?autoplay=1" target="_blank">
-                    <img src="https://img.youtube.com/vi/16pM3-vI0WQ/hqdefault.jpg" alt="サムネイル">
-                </a>
-            </div>
-            <div class="description">
-                 001_NTV_日本テレビ/2025/【高額療養費負担】引き上げ見送り”野党が追及  石破首相「プロセスに丁寧さなかった」_[16pM3-vI0WQ]_2025.03.10 12：36_1分28秒  <a href="https://www.youtube.com/@ntv_news/videos" style="cursor: pointer;" target="_blank"> 📺 </a>
-            </div>
         </div>
-
-    </div>
-    <script>
-        document.getElementById('dirname-select').addEventListener('change', function() {
-            const selectedDirname = this.value;
+        <script>
+            // エリアと県のマッピング
+            const areaPrefectureMap = {
+    
+                "キー局": ['キー局'],
+    
+                "北海道": ['北海道'],
+    
+                "東北": ['青森', '岩手', '宮城', '秋田', '山形', '福島'],
+    
+                "南関東": ['埼玉', '千葉', '東京', '神奈川'],
+    
+                "北関東・甲信": ['茨城', '栃木', '群馬', '山梨', '長野'],
+    
+                "北陸": ['新潟', '富山', '石川', '福井'],
+    
+                "東海": ['岐阜', '静岡', '愛知', '三重'],
+    
+                "近畿": ['滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山'],
+    
+                "中国": ['鳥取', '島根', '岡山', '広島', '山口'],
+    
+                "四国": ['徳島', '香川', '愛媛', '高知'],
+    
+                "九州": ['福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄'],
+    
+                "全国": ['全国'],
+    
+                "地方": ['地方'],
+    
+                "その他": ['その他'],
+    
+            };
+
+            // 県と放送局のマッピング
+            const prefectureTvMap = {
+    
+                "キー局": ['NTV', 'TBS', 'CX', 'EX', 'TX'],
+    
+                "北海道": ['STV', 'HBC', 'UHB', 'HTB', 'TVh', 'NHK札幌放送局', 'NHK函館放送局', 'NHK旭川放送局', 'NHK帯広放送局', 'NHK釧路放送局', 'NHK北見放送局', 'NHK室蘭放送局'],
+    
+                "青森": ['RAB', 'ATV', 'ABA', 'NHK青森放送局'],
+    
+                "岩手": ['TVI', 'IBC', 'mit', 'IAT', 'NHK盛岡放送局'],
+    
+                "宮城": ['MMT', 'tbc', 'OX', 'khb', 'NHK仙台放送局'],
+    
+                "秋田": ['ABS', 'AKT', 'AAB', 'NHK秋田放送局'],
+    
+                "山形": ['YBC', 'TUY', 'SAY', 'YTS', 'NHK山形放送局'],
+    
+                "福島": ['FCT', 'TUF', 'FTV', 'KFB', 'NHK福島放送局'],
+    
+                "茨城": ['NHK水戸放送局'],
+    
+                "栃木": ['GYT', 'NHK宇都宮放送局'],
+    
+                "群馬": ['GTV', 'NHK前橋放送局'],
+    
+                "埼玉": ['TVS', 'NHKさいたま放送局'],
+    
+                "千葉": ['CTC', 'NHK千葉放送局'],
+    
+                "東京": ['MX'],
+    
+                "神奈川": ['tvk', 'NHK横浜放送局'],
+    
+                "新潟": ['TeNY', 'BSN', 'NST', 'UX', 'NHK新潟放送局'],
+    
+                "長野": ['TSB', 'SBC', 'NBS', 'abn', 'NHK長野放送局'],
+    
+                "山梨": ['YBS', 'UTY', 'NHK甲府放送局'],
+    
+                "静岡": ['SDT', 'SBS', 'SUT', 'SATV', 'NHK静岡放送局'],
+    
+                "富山": ['KNB', 'TUT', 'BBT', 'NHK富山放送局'],
+    
+                "石川": ['KTK', 'MRO', 'ITC', 'HAB', 'NHK金沢放送局'],
+    
+                "福井": ['FBC', 'FTB', 'NHK福井放送局'],
+    
+                "愛知": ['CTV', 'CBC', 'THK', 'NBN', 'TVA', 'NHK名古屋放送局'],
+    
+                "岐阜": ['GBS', 'NHK岐阜放送局'],
+    
+                "三重": ['MTV', 'NHK津放送局'],
+    
+                "大阪": ['ytv', 'MBS', 'KTV', 'ABC', 'TVO', 'NHK大阪放送局'],
+    
+                "京都": ['KBS', 'NHK京都放送局'],
+    
+                "兵庫": ['SUN', 'NHK神戸放送局'],
+    
+                "滋賀": ['BBC', 'NHK大津放送局'],
+    
+                "奈良": ['TVN', 'NHK奈良放送局'],
+    
+                "和歌山": ['WTV', 'NHK和歌山放送局'],
+    
+                "鳥取": ['NKT', 'BSS', 'TSK', 'NHK鳥取放送局'],
+    
+                "島根": ['NHK松江放送局'],
+    
+                "広島": ['HTV', 'RCC', 'TSS', 'HOME', 'NHK広島放送局', 'NHK福山支局'],
+    
+                "山口": ['KRY', 'tys', 'yab', 'NHK山口放送局'],
+    
+                "徳島": ['JRT', 'NHK徳島放送局'],
+    
+                "岡山": ['RNC', 'RSK', 'OHK', 'TSC', 'NHK岡山放送局'],
+    
+                "香川": ['KSB', 'NHK高松放送局'],
+    
+                "愛媛": ['RNB', 'ITV', 'EBC', 'eat', 'NHK松山放送局'],
+    
+                "高知": ['RNC', 'KUTV', 'KSS', 'NHK高知放送局'],
+    
+                "福岡": ['FBS', 'RKB', 'TNC', 'KBC', 'TVQ', 'NHK福岡放送局'],
+    
+                "佐賀": ['STS', 'NHK佐賀'],
+    
+                "長崎": ['NIB', 'NBC', 'KTN', 'NCC', 'NHK長崎放送局'],
+    
+                "熊本": ['KKT', 'RKK', 'TKU', 'KAB', 'NHK熊本放送局'],
+    
+                "大分": ['TOS', 'OBS', 'OAB', 'NHK大分放送局'],
+    
+                "宮崎": ['UMK', 'MRT', 'NHK宮崎放送局'],
+    
+                "鹿児島": ['KYT', 'MBC', 'KTS', 'KKB', 'NHK鹿児島放送局'],
+    
+                "沖縄": ['RBC', 'OTV', 'QAB', 'NHK沖縄放送局'],
+    
+                "全国": ['YOMIURI', 'MAINICHI', 'SANKEI', 'ASAHI', 'KYODO', 'NIKKEI', 'NIKKAN'],
+    
+                "地方": ['HOKKAIDO', 'IBARAKI', 'SAITAMA', 'TOKYO', 'HOKKOKU', 'CHUNICHI', 'SANYO', 'SAGA', 'MINAMI'],
+    
+                "その他": ['WNI', 'BBCNJ', 'REUTER', 'FCINY', 'IIZUKA', 'OKINAWA'],
+    
+        };
+
+        const areaSelect = document.getElementById('area-select');
+        const prefectureSelect = document.getElementById('prefecture-select');
+        const debugDiv = document.getElementById('debug');
+
+        // エリア選択時の県リスト更新
+        areaSelect.addEventListener('change', function() {
+            const selectedArea = this.value;
+            prefectureSelect.innerHTML = '<option value="">県を選択（すべて表示）</option>';
+            
+            if (selectedArea && areaPrefectureMap[selectedArea]) {
+                areaPrefectureMap[selectedArea].forEach(pref => {
+                    const option = document.createElement('option');
+                    option.value = pref;
+                    option.text = pref;
+                    prefectureSelect.appendChild(option);
+                });
+            }
+            filterItems();
+        });
+
+        // 県選択時のフィルタリング
+        prefectureSelect.addEventListener('change', function() {
+            filterItems();
+        });
+
+        // フィルタリング関数
+        function filterItems() {
+            const selectedArea = areaSelect.value;
+            const selectedPrefecture = prefectureSelect.value;
             const items = document.querySelectorAll('.item');
+            let debugText = `選択エリア: ${selectedArea || 'なし'}, 選択県: ${selectedPrefecture || 'なし'}`;
 
             items.forEach(item => {
-                const dirname = item.getAttribute('data-dirname');
-                if (selectedDirname === '' || dirname === selectedDirname) {
-                    item.style.display = 'block';
+                const stationCode = item.getAttribute('data-station');
+                let shouldDisplay = false;
+
+                if (!selectedArea) {
+                    shouldDisplay = true; // エリア未選択時はすべて表示
+                } else if (!selectedPrefecture) {
+                    // エリアのみ選択時
+                    for (const pref of areaPrefectureMap[selectedArea]) {
+                        if (prefectureTvMap[pref] && prefectureTvMap[pref].includes(stationCode)) {
+                            shouldDisplay = true;
+                            break;
+                        }
+                    }
                 } else {
-                    item.style.display = 'none';
+                    // 県選択時
+                    if (prefectureTvMap[selectedPrefecture] && prefectureTvMap[selectedPrefecture].includes(stationCode)) {
+                        shouldDisplay = true;
+                    }
+                }
+
+                item.style.display = shouldDisplay ? 'block' : 'none';
+                if (shouldDisplay) {
+                    debugText += `<br>表示: ${stationCode}`;
+                } else {
+                    debugText += `<br>非表示: ${stationCode}`;
                 }
             });
-        });
+
+            debugDiv.innerHTML = debugText;
+        }
     </script>
 </body>
 </html>
