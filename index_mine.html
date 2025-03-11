@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>mine、新聞（マスメディア）</title>
+    <div class="header-text">
+        mine　更新時間：2025年03月11日 18時24分04秒　19 件　再生時間： 8 時間 23 分 48 秒 ( 30,228 秒 )
+    </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .select-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .select-box {
+            width: 32%;
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 2%;
+        }
+        .select-box:last-child {
+            margin-right: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 10px;
+        }
+        .item {
+            flex: 0 0 calc(33.33% - 20px);
+            min-width: 200px;
+            margin: 10px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+        }
+        .video-wrapper a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .description {
+            text-align: left;
+            margin-top: 10px;
+            font-weight: normal;
+            line-height: 1.2;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        #debug {
+            margin: 10px;
+            color: red;
+        }
+        .no-data {
+            color: red;
+        }
+        @media (max-width: 700px) {
+            .item {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 400px) {
+            .item {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="select-container">
+        <select id="area-select" class="select-box">
+            <option value="">エリアを選択（すべて表示）</option>
+
+            <option value="キー局" class="no-data">キー局</option>
+        
+            <option value="北海道" class="no-data">北海道</option>
+        
+            <option value="東北" class="no-data">東北</option>
+        
+            <option value="南関東" class="no-data">南関東</option>
+        
+            <option value="北関東・甲信" class="no-data">北関東・甲信</option>
+        
+            <option value="北陸" class="no-data">北陸</option>
+        
+            <option value="東海" class="no-data">東海</option>
+        
+            <option value="近畿" class="no-data">近畿</option>
+        
+            <option value="中国" class="no-data">中国</option>
+        
+            <option value="四国" class="no-data">四国</option>
+        
+            <option value="九州" class="no-data">九州</option>
+        
+            <option value="全国紙" class="no-data">全国紙</option>
+        
+            <option value="地方紙" class="no-data">地方紙</option>
+        
+            <option value="その他" class="no-data">その他</option>
+        
+        </select>
+        <select id="prefecture-select" class="select-box">
+            <option value="">県を選択（すべて表示）</option>
+        </select>
+        <select id="tv-select" class="select-box">
+            <option value="">TV局を選択（すべて表示）</option>
+        </select>
+    </div>
+    <div id="debug"></div>
+    <div class="container">
+    
+        <div class="item" data-dirname="Kurara/2025" data-station="Kurara/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=JjjKwmSTmq0" target="_blank">
+                    <img src="https://img.youtube.com/vi/JjjKwmSTmq0/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Kurara/2025/ドイツ株「減税」で過去最高値更新・石破総理予算案再修正・春闘32年ぶり6％上回る　村上尚己のマーケットニュース　大橋ひろこ【チャン_[JjjKwmSTmq0]_2025.03.10 23：29_31分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Kurara/2025/ドイツ株「減税」で過去最高値更新・石破総理予算案再修正・春闘32年ぶり6％上回る　村上尚己のマーケットニュース　大橋ひろこ【チャン_[JjjKwmSTmq0]_2025.03.10 23：29_31分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Kurara/2025/ドイツ株「減税」で過去最高値更新・石破総理予算案再修正・春闘32年ぶり6％上回る　村上尚己のマーケットニュース　大橋ひろこ【チャンネルくらら】_[JjjKwmSTmq0]_2025.03.10_23:29_31分  <a href="https://www.youtube.com/channel/UCDrXxofz1CIOo9vqwHqfIyg/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=28&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Kurara/2025/%E3%83%89%E3%82%A4%E3%83%84%E6%A0%AA%E3%80%8C%E6%B8%9B%E7%A8%8E%E3%80%8D%E3%81%A7%E9%81%8E%E5%8E%BB%E6%9C%80%E9%AB%98%E5%80%A4%E6%9B%B4%E6%96%B0%E3%83%BB%E7%9F%B3%E7%A0%B4%E7%B7%8F%E7%90%86%E4%BA%88%E7%AE%97%E6%A1%88%E5%86%8D%E4%BF%AE%E6%AD%A3%E3%83%BB%E6%98%A5%E9%97%9832%E5%B9%B4%E3%81%B6%E3%82%8A6%EF%BC%85%E4%B8%8A%E5%9B%9E%E3%82%8B%E3%80%80%E6%9D%91%E4%B8%8A%E5%B0%9A%E5%B7%B1%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%80%80%E5%A4%A7%E6%A9%8B%E3%81%B2%E3%82%8D%E3%81%93%E3%80%90%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%81%8F%E3%82%89%E3%82%89%E3%80%91_%5BJjjKwmSTmq0%5D_2025.03.10_23%3A29_31%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="PIVOT/2025" data-station="PIVOT/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=ON6MdS-YOYk" target="_blank">
+                    <img src="https://img.youtube.com/vi/ON6MdS-YOYk/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【DIGEST】データで解説、人口減少で日本経済はどうなる？／就職氷河期世代が割を食う理由／なぜ給料は上がり始めたのか／人件費高騰_[ON6MdS-YOYk]_2025.03.10 23：00_13分51秒.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【DIGEST】データで解説、人口減少で日本経済はどうなる？／就職氷河期世代が割を食う理由／なぜ給料は上がり始めたのか／人件費高騰_[ON6MdS-YOYk]_2025.03.10 23：00_13分51秒_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> PIVOT/2025/【DIGEST】データで解説、人口減少で日本経済はどうなる？／就職氷河期世代が割を食う理由／なぜ給料は上がり始めたのか／人件費高騰とインフレ_[ON6MdS-YOYk]_2025.03.10_23:00_13分51秒  <a href="https://www.youtube.com/@pivot00/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=15&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=PIVOT/2025/%E3%80%90DIGEST%E3%80%91%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A7%E8%A7%A3%E8%AA%AC%E3%80%81%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91%E3%81%A7%E6%97%A5%E6%9C%AC%E7%B5%8C%E6%B8%88%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F%EF%BC%8F%E5%B0%B1%E8%81%B7%E6%B0%B7%E6%B2%B3%E6%9C%9F%E4%B8%96%E4%BB%A3%E3%81%8C%E5%89%B2%E3%82%92%E9%A3%9F%E3%81%86%E7%90%86%E7%94%B1%EF%BC%8F%E3%81%AA%E3%81%9C%E7%B5%A6%E6%96%99%E3%81%AF%E4%B8%8A%E3%81%8C%E3%82%8A%E5%A7%8B%E3%82%81%E3%81%9F%E3%81%AE%E3%81%8B%EF%BC%8F%E4%BA%BA%E4%BB%B6%E8%B2%BB%E9%AB%98%E9%A8%B0%E3%81%A8%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AC_%5BON6MdS-YOYk%5D_2025.03.10_23%3A00_13%E5%88%8651%E7%A7%92" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="TbsBloom/2025" data-station="TbsBloom/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=zKpLBPoA1eU" target="_blank">
+                    <img src="https://img.youtube.com/vi/zKpLBPoA1eU/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/TbsBloom/2025/【市場回復まで３カ月】エコノミスト・末廣徹／VIX恐怖指数「25」超え  “世界的混乱”招くトランプ政権 ／猛威振るう「DOGE」_[zKpLBPoA1eU]_2025.03.10 20：09_30分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/TbsBloom/2025/【市場回復まで３カ月】エコノミスト・末廣徹／VIX恐怖指数「25」超え  “世界的混乱”招くトランプ政権 ／猛威振るう「DOGE」_[zKpLBPoA1eU]_2025.03.10 20：09_30分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> TbsBloom/2025/【市場回復まで３カ月】エコノミスト・末廣徹／VIX恐怖指数「25」超え  “世界的混乱”招くトランプ政権 ／猛威振るう「DOGE」 6万人解雇／影響直撃の欧州 金利が急上昇【The Priority】_[zKpLBPoA1eU]_2025.03.10_20:09_30分  <a href="https://www.youtube.com/@tbs_bloomberg/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=6&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=TbsBloom/2025/%E3%80%90%E5%B8%82%E5%A0%B4%E5%9B%9E%E5%BE%A9%E3%81%BE%E3%81%A7%EF%BC%93%E3%82%AB%E6%9C%88%E3%80%91%E3%82%A8%E3%82%B3%E3%83%8E%E3%83%9F%E3%82%B9%E3%83%88%E3%83%BB%E6%9C%AB%E5%BB%A3%E5%BE%B9%EF%BC%8FVIX%E6%81%90%E6%80%96%E6%8C%87%E6%95%B0%E3%80%8C25%E3%80%8D%E8%B6%85%E3%81%88%20%20%E2%80%9C%E4%B8%96%E7%95%8C%E7%9A%84%E6%B7%B7%E4%B9%B1%E2%80%9D%E6%8B%9B%E3%81%8F%E3%83%88%E3%83%A9%E3%83%B3%E3%83%97%E6%94%BF%E6%A8%A9%20%EF%BC%8F%E7%8C%9B%E5%A8%81%E6%8C%AF%E3%82%8B%E3%81%86%E3%80%8CDOGE%E3%80%8D%206%E4%B8%87%E4%BA%BA%E8%A7%A3%E9%9B%87%EF%BC%8F%E5%BD%B1%E9%9F%BF%E7%9B%B4%E6%92%83%E3%81%AE%E6%AC%A7%E5%B7%9E%20%E9%87%91%E5%88%A9%E3%81%8C%E6%80%A5%E4%B8%8A%E6%98%87%E3%80%90The%20Priority%E3%80%91_%5BzKpLBPoA1eU%5D_2025.03.10_20%3A09_30%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Cgs/2025" data-station="Cgs/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=pJ74eipV00o" target="_blank">
+                    <img src="https://img.youtube.com/vi/pJ74eipV00o/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Cgs/2025/今 日本語が荒れている！？ 日本語のルーツ「大和言葉」とは｜林英臣_[pJ74eipV00o]_2025.03.10 20：01_16分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Cgs/2025/今 日本語が荒れている！？ 日本語のルーツ「大和言葉」とは｜林英臣_[pJ74eipV00o]_2025.03.10 20：01_16分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Cgs/2025/今 日本語が荒れている！？ 日本語のルーツ「大和言葉」とは｜林英臣_[pJ74eipV00o]_2025.03.10_20:01_16分  <a href="https://www.youtube.com/@ChGrandStrategy/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=40&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Cgs/2025/%E4%BB%8A%20%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E8%8D%92%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%EF%BC%81%EF%BC%9F%20%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%84%E3%80%8C%E5%A4%A7%E5%92%8C%E8%A8%80%E8%91%89%E3%80%8D%E3%81%A8%E3%81%AF%EF%BD%9C%E6%9E%97%E8%8B%B1%E8%87%A3_%5BpJ74eipV00o%5D_2025.03.10_20%3A01_16%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="PIVOT/2025" data-station="PIVOT/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=VXyaYq2Uwww" target="_blank">
+                    <img src="https://img.youtube.com/vi/VXyaYq2Uwww/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【今さら聞けないFRB＆FOMC】EXIT・りんたろー。＆国山ハセンも知るべき！世界経済を動かす金融政策の仕組み／唐鎌大輔が3月F_[VXyaYq2Uwww]_2025.03.10 20：00_34分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【今さら聞けないFRB＆FOMC】EXIT・りんたろー。＆国山ハセンも知るべき！世界経済を動かす金融政策の仕組み／唐鎌大輔が3月F_[VXyaYq2Uwww]_2025.03.10 20：00_34分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> PIVOT/2025/【今さら聞けないFRB&FOMC】EXIT・りんたろー。&国山ハセンも知るべき！世界経済を動かす金融政策の仕組み／唐鎌大輔が3月FOMCプレビュー「ドットチャートに信憑性なし」（マネースキルセット）_[VXyaYq2Uwww]_2025.03.10_20:00_34分  <a href="https://www.youtube.com/@pivot00/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=15&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=PIVOT/2025/%E3%80%90%E4%BB%8A%E3%81%95%E3%82%89%E8%81%9E%E3%81%91%E3%81%AA%E3%81%84FRB%26FOMC%E3%80%91EXIT%E3%83%BB%E3%82%8A%E3%82%93%E3%81%9F%E3%82%8D%E3%83%BC%E3%80%82%26%E5%9B%BD%E5%B1%B1%E3%83%8F%E3%82%BB%E3%83%B3%E3%82%82%E7%9F%A5%E3%82%8B%E3%81%B9%E3%81%8D%EF%BC%81%E4%B8%96%E7%95%8C%E7%B5%8C%E6%B8%88%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E9%87%91%E8%9E%8D%E6%94%BF%E7%AD%96%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%EF%BC%8F%E5%94%90%E9%8E%8C%E5%A4%A7%E8%BC%94%E3%81%8C3%E6%9C%88FOMC%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%80%8C%E3%83%89%E3%83%83%E3%83%88%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88%E3%81%AB%E4%BF%A1%E6%86%91%E6%80%A7%E3%81%AA%E3%81%97%E3%80%8D%EF%BC%88%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B9%E3%82%AD%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88%EF%BC%89_%5BVXyaYq2Uwww%5D_2025.03.10_20%3A00_34%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Izawa/2025" data-station="Izawa/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=3cqUkHc-AlE" target="_blank">
+                    <img src="https://img.youtube.com/vi/3cqUkHc-AlE/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Izawa/2025/重大告知！ついに〇〇、始めます！_[3cqUkHc-AlE]_2025.03.10 20：00_1分11秒.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Izawa/2025/重大告知！ついに〇〇、始めます！_[3cqUkHc-AlE]_2025.03.10 20：00_1分11秒_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Izawa/2025/重大告知！ついに〇〇、始めます！_[3cqUkHc-AlE]_2025.03.10_20:00_1分11秒  <a href="https://www.youtube.com/@%E4%BA%95%E6%B2%A2%E5%85%83%E5%BD%A6%E3%81%AE%E9%80%86%E8%AA%AC%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=30&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Izawa/2025/%E9%87%8D%E5%A4%A7%E5%91%8A%E7%9F%A5%EF%BC%81%E3%81%A4%E3%81%84%E3%81%AB%E3%80%87%E3%80%87%E3%80%81%E5%A7%8B%E3%82%81%E3%81%BE%E3%81%99%EF%BC%81_%5B3cqUkHc-AlE%5D_2025.03.10_20%3A00_1%E5%88%8611%E7%A7%92" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Horie/2025" data-station="Horie/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=gcwfay5HmzQ" target="_blank">
+                    <img src="https://img.youtube.com/vi/gcwfay5HmzQ/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Horie/2025/【ビル・ゲイツ×堀江貴文】 2人の対談がついに実現_[gcwfay5HmzQ]_2025.03.10 19：00_23分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Horie/2025/【ビル・ゲイツ×堀江貴文】 2人の対談がついに実現_[gcwfay5HmzQ]_2025.03.10 19：00_23分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Horie/2025/【ビル・ゲイツ×堀江貴文】 2人の対談がついに実現_[gcwfay5HmzQ]_2025.03.10_19:00_23分  <a href="https://www.youtube.com/user/takaponjp/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=33&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Horie/2025/%E3%80%90%E3%83%93%E3%83%AB%E3%83%BB%E3%82%B2%E3%82%A4%E3%83%84%C3%97%E5%A0%80%E6%B1%9F%E8%B2%B4%E6%96%87%E3%80%91%202%E4%BA%BA%E3%81%AE%E5%AF%BE%E8%AB%87%E3%81%8C%E3%81%A4%E3%81%84%E3%81%AB%E5%AE%9F%E7%8F%BE_%5Bgcwfay5HmzQ%5D_2025.03.10_19%3A00_23%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Mogi/2025" data-station="Mogi/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=Kwko0SJy9zA" target="_blank">
+                    <img src="https://img.youtube.com/vi/Kwko0SJy9zA/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Mogi/2025/仁徳天皇のレイライン／高安山と淡路島_[Kwko0SJy9zA]_2025.03.10 19：00_19分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Mogi/2025/仁徳天皇のレイライン／高安山と淡路島_[Kwko0SJy9zA]_2025.03.10 19：00_19分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Mogi/2025/仁徳天皇のレイライン／高安山と淡路島_[Kwko0SJy9zA]_2025.03.10_19:00_19分  <a href="https://www.youtube.com/user/MAOMAO96363/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=25&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Mogi/2025/%E4%BB%81%E5%BE%B3%E5%A4%A9%E7%9A%87%E3%81%AE%E3%83%AC%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%B3%EF%BC%8F%E9%AB%98%E5%AE%89%E5%B1%B1%E3%81%A8%E6%B7%A1%E8%B7%AF%E5%B3%B6_%5BKwko0SJy9zA%5D_2025.03.10_19%3A00_19%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="AiRashin/2025" data-station="AiRashin/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=3d8CYveKk9Y" target="_blank">
+                    <img src="https://img.youtube.com/vi/3d8CYveKk9Y/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/AiRashin/2025/未来予想 2030-2040年： AIが仕事と社会をどう変えるか？人間不要の未来シナリオ最終章（2025-03）【トレンド解説シリ_[3d8CYveKk9Y]_2025.03.10 19：00_17分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/AiRashin/2025/未来予想 2030-2040年： AIが仕事と社会をどう変えるか？人間不要の未来シナリオ最終章（2025-03）【トレンド解説シリ_[3d8CYveKk9Y]_2025.03.10 19：00_17分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> AiRashin/2025/未来予想 2030-2040年： AIが仕事と社会をどう変えるか？人間不要の未来シナリオ最終章（2025-03）【トレンド解説シリーズ】_[3d8CYveKk9Y]_2025.03.10_19:00_17分  <a href="https://www.youtube.com/@compassinai/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=44&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=AiRashin/2025/%E6%9C%AA%E6%9D%A5%E4%BA%88%E6%83%B3%202030-2040%E5%B9%B4%EF%BC%9A%20AI%E3%81%8C%E4%BB%95%E4%BA%8B%E3%81%A8%E7%A4%BE%E4%BC%9A%E3%82%92%E3%81%A9%E3%81%86%E5%A4%89%E3%81%88%E3%82%8B%E3%81%8B%EF%BC%9F%E4%BA%BA%E9%96%93%E4%B8%8D%E8%A6%81%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E6%9C%80%E7%B5%82%E7%AB%A0%EF%BC%882025-03%EF%BC%89%E3%80%90%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E8%A7%A3%E8%AA%AC%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E3%80%91_%5B3d8CYveKk9Y%5D_2025.03.10_19%3A00_17%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="NewsPicks/2025" data-station="NewsPicks/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=TIdsbBtQMlQ" target="_blank">
+                    <img src="https://img.youtube.com/vi/TIdsbBtQMlQ/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/NewsPicks/2025/「質の悪い幼稚園・保育園とは？」モンテッソーリ、シュタイナー、今見極めるべき幼稚園の選択ポイント【成田修造⧸宮村優子⧸征矢里沙⧸中_[TIdsbBtQMlQ]_2025.03.10 19：00_14分54秒.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/NewsPicks/2025/「質の悪い幼稚園・保育園とは？」モンテッソーリ、シュタイナー、今見極めるべき幼稚園の選択ポイント【成田修造⧸宮村優子⧸征矢里沙⧸中_[TIdsbBtQMlQ]_2025.03.10 19：00_14分54秒_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> NewsPicks/2025/「質の悪い幼稚園・保育園とは？」モンテッソーリ、シュタイナー、今見極めるべき幼稚園の選択ポイント【成田修造/宮村優子/征矢里沙/中室牧子/親野智可等】EduPassion_[TIdsbBtQMlQ]_2025.03.10_19:00_14分54秒  <a href="https://www.youtube.com/@NewsPicks/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=21&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=NewsPicks/2025/%E3%80%8C%E8%B3%AA%E3%81%AE%E6%82%AA%E3%81%84%E5%B9%BC%E7%A8%9A%E5%9C%92%E3%83%BB%E4%BF%9D%E8%82%B2%E5%9C%92%E3%81%A8%E3%81%AF%EF%BC%9F%E3%80%8D%E3%83%A2%E3%83%B3%E3%83%86%E3%83%83%E3%82%BD%E3%83%BC%E3%83%AA%E3%80%81%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%8A%E3%83%BC%E3%80%81%E4%BB%8A%E8%A6%8B%E6%A5%B5%E3%82%81%E3%82%8B%E3%81%B9%E3%81%8D%E5%B9%BC%E7%A8%9A%E5%9C%92%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%80%90%E6%88%90%E7%94%B0%E4%BF%AE%E9%80%A0/%E5%AE%AE%E6%9D%91%E5%84%AA%E5%AD%90/%E5%BE%81%E7%9F%A2%E9%87%8C%E6%B2%99/%E4%B8%AD%E5%AE%A4%E7%89%A7%E5%AD%90/%E8%A6%AA%E9%87%8E%E6%99%BA%E5%8F%AF%E7%AD%89%E3%80%91EduPassion_%5BTIdsbBtQMlQ%5D_2025.03.10_19%3A00_14%E5%88%8654%E7%A7%92" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Nihonshi1/2025" data-station="Nihonshi1/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=ueAAxw2cHxM" target="_blank">
+                    <img src="https://img.youtube.com/vi/ueAAxw2cHxM/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Nihonshi1/2025/【近代⑤31】超大事 マジで見てください　清浦奎吾内閣と第2次護憲運動【日本史受験】_[ueAAxw2cHxM]_2025.03.10 18：01_16分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Nihonshi1/2025/【近代⑤31】超大事 マジで見てください　清浦奎吾内閣と第2次護憲運動【日本史受験】_[ueAAxw2cHxM]_2025.03.10 18：01_16分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Nihonshi1/2025/【近代⑤31】超大事 マジで見てください　清浦奎吾内閣と第2次護憲運動【日本史受験】_[ueAAxw2cHxM]_2025.03.10_18:01_16分  <a href="https://www.youtube.com/@ippeinihonshi/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=20&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Nihonshi1/2025/%E3%80%90%E8%BF%91%E4%BB%A3%E2%91%A431%E3%80%91%E8%B6%85%E5%A4%A7%E4%BA%8B%20%E3%83%9E%E3%82%B8%E3%81%A7%E8%A6%8B%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%80%E6%B8%85%E6%B5%A6%E5%A5%8E%E5%90%BE%E5%86%85%E9%96%A3%E3%81%A8%E7%AC%AC2%E6%AC%A1%E8%AD%B7%E6%86%B2%E9%81%8B%E5%8B%95%E3%80%90%E6%97%A5%E6%9C%AC%E5%8F%B2%E5%8F%97%E9%A8%93%E3%80%91_%5BueAAxw2cHxM%5D_2025.03.10_18%3A01_16%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Seikei/2025" data-station="Seikei/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=HYkIpg00U7k" target="_blank">
+                    <img src="https://img.youtube.com/vi/HYkIpg00U7k/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Seikei/2025/日本の不動産価格が急激に変化する理由とは？〇〇区が危ない？_[HYkIpg00U7k]_2025.03.10 17：00_25分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Seikei/2025/日本の不動産価格が急激に変化する理由とは？〇〇区が危ない？_[HYkIpg00U7k]_2025.03.10 17：00_25分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Seikei/2025/日本の不動産価格が急激に変化する理由とは?〇〇区が危ない？_[HYkIpg00U7k]_2025.03.10_17:00_25分  <a href="https://www.youtube.com/@SeiKei-Platform/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=14&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Seikei/2025/%E6%97%A5%E6%9C%AC%E3%81%AE%E4%B8%8D%E5%8B%95%E7%94%A3%E4%BE%A1%E6%A0%BC%E3%81%8C%E6%80%A5%E6%BF%80%E3%81%AB%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E7%90%86%E7%94%B1%E3%81%A8%E3%81%AF%3F%E3%80%87%E3%80%87%E5%8C%BA%E3%81%8C%E5%8D%B1%E3%81%AA%E3%81%84%EF%BC%9F_%5BHYkIpg00U7k%5D_2025.03.10_17%3A00_25%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="PIVOT/2025" data-station="PIVOT/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=tVPXX76wnvE" target="_blank">
+                    <img src="https://img.youtube.com/vi/tVPXX76wnvE/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【山岳遭難とお金の話】残された家族にかける7年の負担／災害から身を守るテック／低山遭難者増加の理由_[tVPXX76wnvE]_2025.03.10 16：00_47分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【山岳遭難とお金の話】残された家族にかける7年の負担／災害から身を守るテック／低山遭難者増加の理由_[tVPXX76wnvE]_2025.03.10 16：00_47分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> PIVOT/2025/【山岳遭難とお金の話】残された家族にかける7年の負担／災害から身を守るテック／低山遭難者増加の理由_[tVPXX76wnvE]_2025.03.10_16:00_47分  <a href="https://www.youtube.com/@pivot00/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=15&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=PIVOT/2025/%E3%80%90%E5%B1%B1%E5%B2%B3%E9%81%AD%E9%9B%A3%E3%81%A8%E3%81%8A%E9%87%91%E3%81%AE%E8%A9%B1%E3%80%91%E6%AE%8B%E3%81%95%E3%82%8C%E3%81%9F%E5%AE%B6%E6%97%8F%E3%81%AB%E3%81%8B%E3%81%91%E3%82%8B7%E5%B9%B4%E3%81%AE%E8%B2%A0%E6%8B%85%EF%BC%8F%E7%81%BD%E5%AE%B3%E3%81%8B%E3%82%89%E8%BA%AB%E3%82%92%E5%AE%88%E3%82%8B%E3%83%86%E3%83%83%E3%82%AF%EF%BC%8F%E4%BD%8E%E5%B1%B1%E9%81%AD%E9%9B%A3%E8%80%85%E5%A2%97%E5%8A%A0%E3%81%AE%E7%90%86%E7%94%B1_%5BtVPXX76wnvE%5D_2025.03.10_16%3A00_47%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="OCWUTokyo/2025" data-station="OCWUTokyo/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=N4ae2DjPJYk" target="_blank">
+                    <img src="https://img.youtube.com/vi/N4ae2DjPJYk/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/OCWUTokyo/2025/田中 有紀「類を違える物と共に生きる世界：中国思想から考える環境倫理」（2022年度「30年後の世界へ ― 「共生」を問う（学術フ_[N4ae2DjPJYk]_2025.03.10 12：00_1時間31分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/OCWUTokyo/2025/田中 有紀「類を違える物と共に生きる世界：中国思想から考える環境倫理」（2022年度「30年後の世界へ ― 「共生」を問う（学術フ_[N4ae2DjPJYk]_2025.03.10 12：00_1時間31分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> OCWUTokyo/2025/田中 有紀「類を違える物と共に生きる世界：中国思想から考える環境倫理」（2022年度「30年後の世界へ ― 「共生」を問う（学術フロンティア講義）」第7回）_[N4ae2DjPJYk]_2025.03.10_12:00_1時間31分  <a href="https://www.youtube.com/@ocwutokyo5414/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=18&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=OCWUTokyo/2025/%E7%94%B0%E4%B8%AD%20%E6%9C%89%E7%B4%80%E3%80%8C%E9%A1%9E%E3%82%92%E9%81%95%E3%81%88%E3%82%8B%E7%89%A9%E3%81%A8%E5%85%B1%E3%81%AB%E7%94%9F%E3%81%8D%E3%82%8B%E4%B8%96%E7%95%8C%EF%BC%9A%E4%B8%AD%E5%9B%BD%E6%80%9D%E6%83%B3%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E7%92%B0%E5%A2%83%E5%80%AB%E7%90%86%E3%80%8D%EF%BC%882022%E5%B9%B4%E5%BA%A6%E3%80%8C30%E5%B9%B4%E5%BE%8C%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%B8%20%E2%80%95%20%E3%80%8C%E5%85%B1%E7%94%9F%E3%80%8D%E3%82%92%E5%95%8F%E3%81%86%EF%BC%88%E5%AD%A6%E8%A1%93%E3%83%95%E3%83%AD%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E8%AC%9B%E7%BE%A9%EF%BC%89%E3%80%8D%E7%AC%AC7%E5%9B%9E%EF%BC%89_%5BN4ae2DjPJYk%5D_2025.03.10_12%3A00_1%E6%99%82%E9%96%9331%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="SonyPic/2025" data-station="SonyPic/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=hvZbC6w4Jps" target="_blank">
+                    <img src="https://img.youtube.com/vi/hvZbC6w4Jps/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/SonyPic/2025/リングサイドで勝負をつける！フィリップ vs. ウェイン『ジャン＝クロード・ヴァン・ダム　ザ・ディフェンダー』映画フル公開_[hvZbC6w4Jps]_2025.03.10 10：00_3分52秒.html" style="cursor: pointer;" target="_blank"> 📄 </a> SonyPic/2025/リングサイドで勝負をつける！フィリップ vs. ウェイン『ジャン＝クロード・ヴァン・ダム　ザ・ディフェンダー』映画フル公開🎥_[hvZbC6w4Jps]_2025.03.10_10:00_3分52秒  <a href="https://www.youtube.com/@SonyPicturesJP/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=9&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=SonyPic/2025/%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B5%E3%82%A4%E3%83%89%E3%81%A7%E5%8B%9D%E8%B2%A0%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B%EF%BC%81%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%20vs.%20%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3%E3%80%8E%E3%82%B8%E3%83%A3%E3%83%B3%EF%BC%9D%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%89%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%80%E3%83%A0%E3%80%80%E3%82%B6%E3%83%BB%E3%83%87%E3%82%A3%E3%83%95%E3%82%A7%E3%83%B3%E3%83%80%E3%83%BC%E3%80%8F%E6%98%A0%E7%94%BB%E3%83%95%E3%83%AB%E5%85%AC%E9%96%8B%F0%9F%8E%A5_%5BhvZbC6w4Jps%5D_2025.03.10_10%3A00_3%E5%88%8652%E7%A7%92" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="PIVOT/2025" data-station="PIVOT/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=WtmqH8iBgYI" target="_blank">
+                    <img src="https://img.youtube.com/vi/WtmqH8iBgYI/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【パナソニック、衰退の本質】ソニーとの勝負の分かれ目／カリスマからの脱却／中村体制のプラズマ敗戦が決定的／破壊に終始／日産との共通_[WtmqH8iBgYI]_2025.03.10 07：00_35分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/PIVOT/2025/【パナソニック、衰退の本質】ソニーとの勝負の分かれ目／カリスマからの脱却／中村体制のプラズマ敗戦が決定的／破壊に終始／日産との共通_[WtmqH8iBgYI]_2025.03.10 07：00_35分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> PIVOT/2025/【パナソニック、衰退の本質】ソニーとの勝負の分かれ目／カリスマからの脱却／中村体制のプラズマ敗戦が決定的／破壊に終始／日産との共通点／アンテナが低い／津賀体制は敗戦処理で精一杯／何の会社なのか？_[WtmqH8iBgYI]_2025.03.10_07:00_35分  <a href="https://www.youtube.com/@pivot00/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=15&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=PIVOT/2025/%E3%80%90%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%80%81%E8%A1%B0%E9%80%80%E3%81%AE%E6%9C%AC%E8%B3%AA%E3%80%91%E3%82%BD%E3%83%8B%E3%83%BC%E3%81%A8%E3%81%AE%E5%8B%9D%E8%B2%A0%E3%81%AE%E5%88%86%E3%81%8B%E3%82%8C%E7%9B%AE%EF%BC%8F%E3%82%AB%E3%83%AA%E3%82%B9%E3%83%9E%E3%81%8B%E3%82%89%E3%81%AE%E8%84%B1%E5%8D%B4%EF%BC%8F%E4%B8%AD%E6%9D%91%E4%BD%93%E5%88%B6%E3%81%AE%E3%83%97%E3%83%A9%E3%82%BA%E3%83%9E%E6%95%97%E6%88%A6%E3%81%8C%E6%B1%BA%E5%AE%9A%E7%9A%84%EF%BC%8F%E7%A0%B4%E5%A3%8A%E3%81%AB%E7%B5%82%E5%A7%8B%EF%BC%8F%E6%97%A5%E7%94%A3%E3%81%A8%E3%81%AE%E5%85%B1%E9%80%9A%E7%82%B9%EF%BC%8F%E3%82%A2%E3%83%B3%E3%83%86%E3%83%8A%E3%81%8C%E4%BD%8E%E3%81%84%EF%BC%8F%E6%B4%A5%E8%B3%80%E4%BD%93%E5%88%B6%E3%81%AF%E6%95%97%E6%88%A6%E5%87%A6%E7%90%86%E3%81%A7%E7%B2%BE%E4%B8%80%E6%9D%AF%EF%BC%8F%E4%BD%95%E3%81%AE%E4%BC%9A%E7%A4%BE%E3%81%AA%E3%81%AE%E3%81%8B%EF%BC%9F_%5BWtmqH8iBgYI%5D_2025.03.10_07%3A00_35%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="NewsPicks/2025" data-station="NewsPicks/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=_yQpiUoMEq0" target="_blank">
+                    <img src="https://img.youtube.com/vi/_yQpiUoMEq0/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/NewsPicks/2025/「結局、美人が得をする」この世の残酷な真実。低年齢化する美容整形の是非、現代社会の＂ルッキズム＂の闇を赤裸々に語る【アレン様×トン_[_yQpiUoMEq0]_2025.03.10 07：00_21分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/NewsPicks/2025/「結局、美人が得をする」この世の残酷な真実。低年齢化する美容整形の是非、現代社会の＂ルッキズム＂の闇を赤裸々に語る【アレン様×トン_[_yQpiUoMEq0]_2025.03.10 07：00_21分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> NewsPicks/2025/「結局、美人が得をする」この世の残酷な真実。低年齢化する美容整形の是非、現代社会の"ルッキズム"の闇を赤裸々に語る【アレン様×トンツカタン森本】_[_yQpiUoMEq0]_2025.03.10_07:00_21分  <a href="https://www.youtube.com/@NewsPicks/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=21&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=NewsPicks/2025/%E3%80%8C%E7%B5%90%E5%B1%80%E3%80%81%E7%BE%8E%E4%BA%BA%E3%81%8C%E5%BE%97%E3%82%92%E3%81%99%E3%82%8B%E3%80%8D%E3%81%93%E3%81%AE%E4%B8%96%E3%81%AE%E6%AE%8B%E9%85%B7%E3%81%AA%E7%9C%9F%E5%AE%9F%E3%80%82%E4%BD%8E%E5%B9%B4%E9%BD%A2%E5%8C%96%E3%81%99%E3%82%8B%E7%BE%8E%E5%AE%B9%E6%95%B4%E5%BD%A2%E3%81%AE%E6%98%AF%E9%9D%9E%E3%80%81%E7%8F%BE%E4%BB%A3%E7%A4%BE%E4%BC%9A%E3%81%AE%22%E3%83%AB%E3%83%83%E3%82%AD%E3%82%BA%E3%83%A0%22%E3%81%AE%E9%97%87%E3%82%92%E8%B5%A4%E8%A3%B8%E3%80%85%E3%81%AB%E8%AA%9E%E3%82%8B%E3%80%90%E3%82%A2%E3%83%AC%E3%83%B3%E6%A7%98%C3%97%E3%83%88%E3%83%B3%E3%83%84%E3%82%AB%E3%82%BF%E3%83%B3%E6%A3%AE%E6%9C%AC%E3%80%91_%5B_yQpiUoMEq0%5D_2025.03.10_07%3A00_21%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="AiRashin/2025" data-station="AiRashin/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=zSNzbPEdVGU" target="_blank">
+                    <img src="https://img.youtube.com/vi/zSNzbPEdVGU/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/AiRashin/2025/未来予想 2027-2030年：AI進化がもたらす世界秩序の激変と新たな経済構造とは？（2025-03）【トレンド解説シリーズ】_[zSNzbPEdVGU]_2025.03.10 07：00_20分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/AiRashin/2025/未来予想 2027-2030年：AI進化がもたらす世界秩序の激変と新たな経済構造とは？（2025-03）【トレンド解説シリーズ】_[zSNzbPEdVGU]_2025.03.10 07：00_20分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> AiRashin/2025/未来予想 2027-2030年：AI進化がもたらす世界秩序の激変と新たな経済構造とは？（2025-03）【トレンド解説シリーズ】_[zSNzbPEdVGU]_2025.03.10_07:00_20分  <a href="https://www.youtube.com/@compassinai/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=44&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=AiRashin/2025/%E6%9C%AA%E6%9D%A5%E4%BA%88%E6%83%B3%202027-2030%E5%B9%B4%EF%BC%9AAI%E9%80%B2%E5%8C%96%E3%81%8C%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E4%B8%96%E7%95%8C%E7%A7%A9%E5%BA%8F%E3%81%AE%E6%BF%80%E5%A4%89%E3%81%A8%E6%96%B0%E3%81%9F%E3%81%AA%E7%B5%8C%E6%B8%88%E6%A7%8B%E9%80%A0%E3%81%A8%E3%81%AF%EF%BC%9F%EF%BC%882025-03%EF%BC%89%E3%80%90%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E8%A7%A3%E8%AA%AC%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E3%80%91_%5BzSNzbPEdVGU%5D_2025.03.10_07%3A00_20%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+        <div class="item" data-dirname="Coten/2025" data-station="Coten/2025">
+            <div class="video-wrapper">
+                <a href="https://www.youtube.com/watch?v=3XwItOkzI90" target="_blank">
+                    <img src="https://img.youtube.com/vi/3XwItOkzI90/hqdefault.jpg" alt="サムネイル">
+                </a>
+            </div>
+            <div class="description">
+                <a href="http://192.168.1.3:80/mine/youtube_text_html/Coten/2025/新しい朝がきた！老舗ベンチャー 中川政七商店の事業継承【番外編＃115】_[3XwItOkzI90]_2025.03.10 06：00_45分.html" style="cursor: pointer;" target="_blank"> 📄 </a>  <a href="http://192.168.1.3:80/mine/youtube_text_html/Coten/2025/新しい朝がきた！老舗ベンチャー 中川政七商店の事業継承【番外編＃115】_[3XwItOkzI90]_2025.03.10 06：00_45分_s_gpt.html" style="cursor: pointer;" target="_blank"> 🗒️ </a> Coten/2025/新しい朝がきた！老舗ベンチャー 中川政七商店の事業継承【番外編＃115】_[3XwItOkzI90]_2025.03.10_06:00_45分  <a href="https://www.youtube.com/@cotenradio/videos" style="cursor: pointer;" target="_blank"> 📺 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=1&folder_index=39&folder2_index=0" style="cursor: pointer;" target="_blank"> 📁 </a>  <a href="http://localhost:8501/?top_index=0&ope_index=3&hist2moji_flg=1&select_hist=Coten/2025/%E6%96%B0%E3%81%97%E3%81%84%E6%9C%9D%E3%81%8C%E3%81%8D%E3%81%9F%EF%BC%81%E8%80%81%E8%88%97%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%20%E4%B8%AD%E5%B7%9D%E6%94%BF%E4%B8%83%E5%95%86%E5%BA%97%E3%81%AE%E4%BA%8B%E6%A5%AD%E7%B6%99%E6%89%BF%E3%80%90%E7%95%AA%E5%A4%96%E7%B7%A8%EF%BC%83115%E3%80%91_%5B3XwItOkzI90%5D_2025.03.10_06%3A00_45%E5%88%86" style="cursor: pointer;" target="_blank"> 📝 </a>
+            </div>
+        </div>
+            
+    </div>
+    <script>
+        const areaPrefectureMap = {
+    
+            "キー局": ['キー局'],
+        
+            "北海道": ['北海道'],
+        
+            "東北": ['青森', '岩手', '宮城', '秋田', '山形', '福島'],
+        
+            "南関東": ['埼玉', '千葉', '東京', '神奈川'],
+        
+            "北関東・甲信": ['茨城', '栃木', '群馬', '山梨', '長野'],
+        
+            "北陸": ['新潟', '富山', '石川', '福井'],
+        
+            "東海": ['岐阜', '静岡', '愛知', '三重'],
+        
+            "近畿": ['滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山'],
+        
+            "中国": ['鳥取', '島根', '岡山', '広島', '山口'],
+        
+            "四国": ['徳島', '香川', '愛媛', '高知'],
+        
+            "九州": ['福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄'],
+        
+            "全国紙": ['全国紙'],
+        
+            "地方紙": ['地方紙'],
+        
+            "その他": ['その他'],
+        
+        };
+
+        const prefectureTvMap = {
+    
+            "キー局": ['NTV_日本テレビ', 'TBS_TBSテレビ', 'CX_フジテレビジョン', 'EX_テレビ朝日', 'TX_テレビ東京'],
+        
+            "北海道": ['STV_札幌テレビ放送', 'HBC_北海道放送', 'UHB_北海道文化放送', 'HTB_北海道テレビ放送', 'TVh_テレビ北海道', 'NHK札幌放送局', 'NHK函館放送局', 'NHK旭川放送局', 'NHK帯広放送局', 'NHK釧路放送局', 'NHK北見放送局', 'NHK室蘭放送局'],
+        
+            "青森": ['RAB_青森放送', 'ATV_青森テレビ', 'ABA_青森朝日放送', 'NHK青森放送局'],
+        
+            "岩手": ['TVI_テレビ岩手', 'IBC_岩手放送', 'mit_岩手めんこいテレビ', 'IAT_岩手朝日テレビ', 'NHK盛岡放送局'],
+        
+            "宮城": ['MMT_宮城テレビ放送', 'tbc_東北放送', 'OX_仙台放送', 'khb_東日本放送', 'NHK仙台放送局'],
+        
+            "秋田": ['ABS_秋田放送', 'AKT_秋田テレビ', 'AAB_秋田朝日放送', 'NHK秋田放送局'],
+        
+            "山形": ['YBC_山形放送', 'TUY_テレビユー山形', 'SAY_さくらんぼテレビジョン', 'YTS_山形テレビ', 'NHK山形放送局'],
+        
+            "福島": ['FCT_福島中央テレビ', 'TUF_テレビユー福島', 'FTV_福島テレビ', 'KFB_福島放送', 'NHK福島放送局'],
+        
+            "茨城": ['NHK水戸放送局'],
+        
+            "栃木": ['GYT_とちぎテレビ', 'NHK宇都宮放送局'],
+        
+            "群馬": ['GTV_群馬テレビ', 'NHK前橋放送局'],
+        
+            "埼玉": ['TVS_テレビ埼玉', 'NHKさいたま放送局'],
+        
+            "千葉": ['CTC_千葉テレビ放送', 'NHK千葉放送局'],
+        
+            "東京": ['MX_東京MXテレビ'],
+        
+            "神奈川": ['tvk_テレビ神奈川', 'NHK横浜放送局'],
+        
+            "新潟": ['TeNY_テレビ新潟', 'BSN_新潟放送', 'NST_新潟総合テレビ', 'UX_新潟テレビ21', 'NHK新潟放送局'],
+        
+            "長野": ['TSB_テレビ信州', 'SBC_信越放送', 'NBS_長野放送', 'abn_長野朝日放送', 'NHK長野放送局'],
+        
+            "山梨": ['YBS_山梨放送', 'UTY_テレビ山梨', 'NHK甲府放送局'],
+        
+            "静岡": ['SDT_静岡第一テレビ', 'SBS_静岡放送', 'SUT_テレビ静岡', 'SATV_静岡朝日テレビ', 'NHK静岡放送局'],
+        
+            "富山": ['KNB_北日本放送', 'TUT_チューリップテレビ', 'BBT_富山テレビ放送', 'NHK富山放送局'],
+        
+            "石川": ['KTK_テレビ金沢', 'MRO_北陸放送', 'ITC_石川テレビ放送', 'HAB_北陸朝日放送', 'NHK金沢放送局'],
+        
+            "福井": ['FBC_福井放送', 'FTB_福井テレビジョン', 'NHK福井放送局'],
+        
+            "愛知": ['CTV_中京テレビ放送', 'CBC_CBCテレビ', 'THK_東海テレビ放送', 'NBN_名古屋テレビ放送', 'TVA_テレビ愛知', 'NHK名古屋放送局'],
+        
+            "岐阜": ['GBS_岐阜放送', 'NHK岐阜放送局'],
+        
+            "三重": ['MTV_三重テレビ放送', 'NHK津放送局'],
+        
+            "大阪": ['ytv_讀賣テレビ放送', 'MBS_毎日放送', 'KTV_関西テレビ放送', 'ABC_朝日放送テレビ', 'TVO_テレビ大阪', 'NHK大阪放送局'],
+        
+            "京都": ['KBS_京都放送', 'NHK京都放送局'],
+        
+            "兵庫": ['SUN_サンテレビジョン', 'NHK神戸放送局'],
+        
+            "滋賀": ['BBC_びわ湖放送', 'NHK大津放送局'],
+        
+            "奈良": ['TVN_奈良テレビ放送', 'NHK奈良放送局'],
+        
+            "和歌山": ['WTV_テレビ和歌山', 'NHK和歌山放送局'],
+        
+            "鳥取": ['NKT_日本海テレビ放送', 'BSS_山陰放送', 'TSK_山陰中央テレビ', 'NHK鳥取放送局'],
+        
+            "島根": ['NHK松江放送局'],
+        
+            "広島": ['HTV_広島テレビ放送', 'RCC_中国放送', 'TSS_テレビ新広島', 'HOME_広島ホームテレビ', 'NHK広島放送局', 'NHK福山支局'],
+        
+            "山口": ['KRY_山口放送', 'tys_テレビ山口', 'yab_山口朝日放送', 'NHK山口放送局'],
+        
+            "徳島": ['JRT_四国放送', 'NHK徳島放送局'],
+        
+            "岡山": ['RNC_西日本放送', 'RSK_山陽放送', 'OHK_岡山放送', 'TSC_テレビせとうち', 'NHK岡山放送局'],
+        
+            "香川": ['KSB_瀬戸内海放送', 'NHK高松放送局'],
+        
+            "愛媛": ['RNB_南海放送', 'ITV_あいテレビ', 'EBC_テレビ愛媛', 'eat_愛媛朝日テレビ', 'NHK松山放送局'],
+        
+            "高知": ['RNC_高知放送', 'KUTV_テレビ高知', 'KSS_高知さんさんテレビ', 'NHK高知放送局'],
+        
+            "福岡": ['FBS_福岡放送', 'RKB_RKB毎日放送', 'TNC_テレビ西日本', 'KBC_九州朝日放送', 'TVQ_TVQ九州放送', 'NHK福岡放送局'],
+        
+            "佐賀": ['STS_サガテレビ', 'NHK佐賀'],
+        
+            "長崎": ['NIB_長崎国際テレビ', 'NBC_長崎放送', 'KTN_テレビ長崎', 'NCC_長崎文化放送', 'NHK長崎放送局'],
+        
+            "熊本": ['KKT_熊本県民テレビ', 'RKK_熊本放送', 'TKU_テレビ熊本', 'KAB_熊本朝日放送', 'NHK熊本放送局'],
+        
+            "大分": ['TOS_テレビ大分', 'OBS_大分放送', 'OAB_大分朝日放送', 'NHK大分放送局'],
+        
+            "宮崎": ['UMK_テレビ宮崎', 'MRT_宮崎放送', 'NHK宮崎放送局'],
+        
+            "鹿児島": ['KYT_鹿児島読売テレビ', 'MBC_南日本放送', 'KTS_鹿児島テレビ放送', 'KKB_鹿児島放送', 'NHK鹿児島放送局'],
+        
+            "沖縄": ['RBC_琉球放送', 'OTV_沖縄テレビ放送', 'QAB_琉球朝日放送', 'NHK沖縄放送局'],
+        
+            "全国紙": ['YOMIURI_読売新聞', 'MAINICHI_毎日新聞', 'SANKEI_産経新聞', 'ASAHI_朝日新聞', 'KYODO_共同通信社', 'NIKKEI_日本経済新聞', 'NIKKAN_日刊工業新聞'],
+        
+            "地方紙": ['HOKKAIDO_北海道新聞', 'IBARAKI_茨城新聞', 'SAITAMA_埼玉新聞', 'TOKYO_東京新聞', 'HOKKOKU_北國新聞', 'CHUNICHI_中日新聞', 'SANYO_山陽新聞', 'SAGA_佐賀新聞', 'MINAMI_南日本新聞'],
+        
+            "その他": ['WNI_ウェザーニューズ', 'BBCNJ_BBC News Japan', 'REUTER_ロイター', 'FCINY_FCI NY', 'IIZUKA_筑豊 NEWS WEB', 'OKINAWA_沖縄タイムス'],
+        
+        };
+        
+
+        const existingStations = ['Seikei', 'PIVOT', 'NewsPicks', 'Cgs', 'Horie', 'Izawa', 'AiRashin', 'Nihonshi1', 'OCWUTokyo', 'Coten', 'Kurara', 'Mogi', 'SonyPic', 'TbsBloom'];
+
+        const areaSelect = document.getElementById('area-select');
+        const prefectureSelect = document.getElementById('prefecture-select');
+        const tvSelect = document.getElementById('tv-select');
+        const debugDiv = document.getElementById('debug');
+
+        areaSelect.addEventListener('change', function() {
+            const selectedArea = this.value;
+            prefectureSelect.innerHTML = '<option value="">県を選択（すべて表示）</option>';
+            tvSelect.innerHTML = '<option value="">TV局を選択（すべて表示）</option>';
+
+            console.log('選択されたエリア:', selectedArea); // デバッグ用
+            console.log('areaPrefectureMap:', areaPrefectureMap); // マッピング確認
+
+            if (selectedArea === 'キー局' || selectedArea === '北海道' || selectedArea === '全国紙' || selectedArea === 'その他' || selectedArea === '地方紙') {
+                const option = document.createElement('option');
+                option.value = selectedArea;
+                option.text = selectedArea;
+                option.selected = true;
+                prefectureSelect.appendChild(option);
+                if (prefectureTvMap[selectedArea]) {
+                    prefectureTvMap[selectedArea].forEach(station => {
+                        const hasData = existingStations.includes(station.split('_')[0]);
+                        const option = document.createElement('option');
+                        option.value = station;
+                        option.text = station;
+                        if (!hasData) option.className = 'no-data';
+                        tvSelect.appendChild(option);
+                    });
+                }
+            } else if (selectedArea && areaPrefectureMap[selectedArea]) {
+                areaPrefectureMap[selectedArea].forEach(pref => {
+                    const hasData = prefectureTvMap[pref] && prefectureTvMap[pref].some(station => existingStations.includes(station.split('_')[0]));
+                    const option = document.createElement('option');
+                    option.value = pref;
+                    option.text = pref;
+                    if (!hasData) option.className = 'no-data';
+                    prefectureSelect.appendChild(option);
+                });
+            }
+            filterItems();
+        });
+
+        prefectureSelect.addEventListener('change', function() {
+            const selectedPrefecture = this.value;
+            tvSelect.innerHTML = '<option value="">TV局を選択（すべて表示）</option>';
+
+            console.log('選択された県:', selectedPrefecture); // デバッグ用
+
+            if (selectedPrefecture && prefectureTvMap[selectedPrefecture]) {
+                prefectureTvMap[selectedPrefecture].forEach(station => {
+                    const hasData = existingStations.includes(station.split('_')[0]);
+                    const option = document.createElement('option');
+                    option.value = station;
+                    option.text = station;
+                    if (!hasData) option.className = 'no-data';
+                    tvSelect.appendChild(option);
+                });
+            }
+            filterItems();
+        });
+
+        tvSelect.addEventListener('change', function() {
+            filterItems();
+        });
+
+        function filterItems() {
+            const selectedArea = areaSelect.value;
+            const selectedPrefecture = prefectureSelect.value;
+            const selectedTv = tvSelect.value;
+            const items = document.querySelectorAll('.item');
+            let debugText = `選択エリア: ${selectedArea || 'なし'}, 選択県: ${selectedPrefecture || 'なし'}, 選択TV局: ${selectedTv || 'なし'}`;
+            items.forEach(item => {
+                const stationCode = item.getAttribute('data-station');
+                let shouldDisplay = false;
+                if (!selectedArea) {
+                    shouldDisplay = true;
+                } else if (!selectedPrefecture) {
+                    for (const pref of areaPrefectureMap[selectedArea]) {
+                        if (prefectureTvMap[pref] && prefectureTvMap[pref].some(station => station.split('_')[0] === stationCode)) {
+                            shouldDisplay = true;
+                            break;
+                        }
+                    }
+                } else if (!selectedTv) {
+                    if (prefectureTvMap[selectedPrefecture] && prefectureTvMap[selectedPrefecture].some(station => station.split('_')[0] === stationCode)) {
+                        shouldDisplay = true;
+                    }
+                } else {
+                    if (selectedTv.split('_')[0] === stationCode) {
+                        shouldDisplay = true;
+                    }
+                }
+                item.style.display = shouldDisplay ? 'block' : 'none';
+                if (shouldDisplay) {
+                    debugText += `<br>表示: ${stationCode}`;
+                } else {
+                    debugText += `<br>非表示: ${stationCode}`;
+                }
+            });
+            //debugDiv.innerHTML = debugText;
+        }
+    </script>
+</body>
+</html>
+    
