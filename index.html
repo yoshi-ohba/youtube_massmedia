@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>TV、新聞（マスメディア）</title>
     <div id="top-position" class="header-text">
-        TV　古い：2025.03.19_18:27　正式：2025.03.20_06:22　暫定：--　作成：2025.03.20_06:58:14　554 件　再生時間： 35 時間 41 分 8 秒 ( 128,468 秒 )
+        TV　古い：2025.03.19_18:27　正式：2025.03.20_06:22　暫定：--　作成：2025.03.20_08:27:42　554 件　再生時間： 35 時間 41 分 8 秒 ( 128,468 秒 )
     </div>
     <style>
         body {
@@ -251,8 +251,15 @@
         
             </div>
         </div>
+        <div class="custom-select" id="prefecture-select">
+            <div class="selected-option">県を選択（すべて表示）</div>
+            <div class="custom-options"></div>
         </div>
-    </dev>
+        <div class="custom-select" id="tv-select">
+            <div class="selected-option">TV局を選択（すべて表示）</div>
+            <div class="custom-options"></div>
+        </div>
+    </div>
     <div id="debug"></div>
     <div class="container">
     
@@ -10926,14 +10933,23 @@
         const existingStations = ['TVA', 'STS', 'MBS', 'EX', 'ITV', 'KYT', 'MBC', 'CBC', 'UHB', 'KUTV', 'MRO', 'KSB', 'NST', 'RKK', 'SATV', 'NBC', 'NTV', 'OBS', 'HTB', 'NCC', 'RBC', 'THK', 'TKU', 'GTV', 'FTV', 'TeNY', 'MX', 'tvk', 'yab', 'TVN', 'TUY', 'OX', 'TNC', 'BSN', 'UTY', 'RCC', 'KKB', 'KTS', 'STV', 'WNI', 'NBN', 'BBT', 'SBS', 'KTV', 'KKT', 'RSK', 'tbc', 'BBC', 'YTS', 'TOS', 'AKT', 'HOKKAIDO', 'KBC', 'ytv', 'mit', 'TVQ', 'khb', 'FBS', 'JIJI', 'TSS', 'EBC', 'CTC', 'KYODO', 'TBS', 'RKB', 'SUT', 'FBC', 'BSS', 'KSS', 'abn', 'UX', 'ABC', 'AAB', 'NBS', 'SAKIGAKE', 'HTV', 'SANKEI', 'SUN', 'HOKKOKU', 'TVS', 'OHK', 'OTV', 'ITC', 'HOME', 'TX', 'OAB', 'TUT', 'HBC', 'KTN', 'TVO', 'UMK', 'CX', 'YOMIURI', 'KAB'];
         
         const areaSelect = document.getElementById('area-select');
-        const prefectureSelect = document.getElementById('prefecture-select');
-        const tvSelect = document.getElementById('tv-select');
-        const debugDiv = document.getElementById('debug');
 
-        const select = document.querySelector(".custom-select");
+        //const select = document.querySelector(".custom-select");
         const selected = areaSelect.querySelector(".selected-option");
         const options = areaSelect.querySelector(".custom-options");
         const optionItems = areaSelect.querySelectorAll(".option");
+
+        const prefectureSelect = document.getElementById('prefecture-select');
+        const prefectureSelected = prefectureSelect.querySelector(".selected-option");
+        const prefectureOptions = prefectureSelect.querySelector(".custom-options");
+        const prefectureOptionItems = prefectureSelect.querySelectorAll(".option");
+
+        const tvSelect = document.getElementById('tv-select');
+        const tvSelected = tvSelect.querySelector(".selected-option");
+        const tvOptions = tvSelect.querySelector(".custom-options");
+        const tvOptionItems = tvSelect.querySelectorAll(".option");
+
+        const debugDiv = document.getElementById('debug');
 
         // クリックで開閉
         areaSelect.addEventListener("click", function(event) {
@@ -11051,19 +11067,28 @@
         // 県のセレクトボックスを初期化
         function initializePrefectureSelect() {
             const allPrefectures = getAllPrefectures();
-            prefectureSelect.innerHTML = '<div class="selected-option">県を選択（すべて表示）</div>';
+            
+            // selected-option のテキストを更新
+            prefectureSelected.textContent = '県を選択（すべて表示）';
+            
+            // custom-options をクリア
+            prefectureOptions.innerHTML = '';
+
             allPrefectures.forEach(pref => {
                 const hasData = prefectureTvMap[pref] && 
                                 prefectureTvMap[pref].some(station => 
                                     existingStations.includes(station.split('_')[0])
                                 );
-                const option = document.createElement('option');
-                option.value = pref;
-                option.text = pref;
+                const newDiv = document.createElement('div');
+                newDiv.textContent = pref;
+                newDiv.dataset.value = pref;
+                newDiv.classList.add('option');
                 if (!hasData) {
-                    option.classList.add('no-data');
+                    newDiv.classList.add('no-data');
                 }
-                //prefectureSelect.appendChild(option);
+                console.log('add県:', pref); // デバッグ用
+
+                prefectureOptions.appendChild(newDiv);
             });
         }
 
