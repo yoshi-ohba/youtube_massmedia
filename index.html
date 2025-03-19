@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>TV、新聞（マスメディア）</title>
     <div id="top-position" class="header-text">
-        TV　古い：2025.03.18_19:41　正式：2025.03.19_13:57　暫定：2025.03.19_15:41　作成：2025.03.19_15:41:44　498 件　再生時間： 20 時間 42 分 27 秒 ( 74,547 秒 )
+        TV　古い：2025.03.18_19:41　正式：2025.03.19_13:57　暫定：2025.03.19_15:41　作成：2025.03.19_16:31:53　498 件　再生時間： 20 時間 42 分 27 秒 ( 74,547 秒 )
     </div>
     <style>
         body {
@@ -9832,6 +9832,9 @@
                 option.text = pref;
                 if (!hasData) {
                     option.classList.add('no-data');
+                    option.style.backgroundColor = 'pink'; // または任意の色
+                } else {
+                    option.style.backgroundColor = ''; // デフォルトの背景色に戻す
                 }
                 prefectureSelect.appendChild(option);
             });
